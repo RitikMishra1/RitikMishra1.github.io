@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ritik Mishra's Portfolio">
+  <meta name="keywords" content="Ritik Mishra, Software Engineer, Portfolio">
+  <title>Ritik Mishra | Senior Software Engineer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.min.js"></script>
+
+</head>
+<body data-theme="light" class="font-sans">
+
+<header class="text-gray-600 body-font bg-blue-300 dark:bg-green-600"> <!-- Changed color from bg-yellow-300 -->
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a href="#about" class="mr-5 hover:text-blue-500 dark:hover:text-blue-300">About Me</a>
+            <a href="#experience" class="mr-5 hover:text-blue-500 dark:hover:text-blue-300">Experience</a>
+            <a href="#projects" class="mr-5 hover:text-blue-500 dark:hover:text-blue-300">Projects</a>
+            <a href="#skills" class="mr-5 hover:text-blue-500 dark:hover:text-blue-300">Skills</a>
+            <a href="#contact" class="mr-5 hover:text-blue-500 dark:hover:text-blue-300">Contact</a>
+        </nav>
+        <div id="theme-toggle" class="theme-toggle text-2xl focus:outline-none">
+            <span class="theme-toggle-icon">🌞</span> <!-- Sun icon -->
+            <input type="range" min="0" max="1" step="1" value="0" class="slider" id="theme-slider">
+            <span class="theme-toggle-icon">🌚</span> <!-- Different Moon icon -->
+        </div>
+    </div>
+</header>
+
+<!-- About Me Section -->
+<section id="about" class="text-yellow-600 body-font">
+  <div class="container mx-auto flex flex-col py-24 md:flex-row items-center">
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
+      <!-- Profile Picture -->
+      <img class="object-cover object-center rounded-full" src="About_me.jpeg" alt="Profile Picture">
+    </div>
+    <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+      <!-- Icon and Header -->
+      <div class="flex items-center mb-4">
+        <i class="fas fa-user-circle fa-3x text-indigo-500"></i> <!-- About Me Icon -->
+        <h2 class="text-3xl title-font font-medium text-gray-900 ml-4">About Me</h2>
+      </div>
+      <!-- About Text -->
+      <p class="mb-8 leading-relaxed">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-tomato-900">Ritik Mishra</h1>
+            <p class="mb-8 leading-relaxed">Hey there! I'm Ritik, an AI enthusiast on a mission to revolutionize the world through technology. My journey in the tech industry started with a spark of curiosity and a passion for problem-solving. As a child, I was always intrigued by the wonders of computers and the limitless possibilities they offered.</p>
+            <p class="mb-8 leading-relaxed">Fast forward to today, and I find myself at the forefront of cutting-edge technologies like artificial intelligence and machine learning. What drives me is the opportunity to create solutions that not only address current challenges but also pave the way for a better future.</p>
+            <p class="mb-8 leading-relaxed">During my time pursuing a Master of Science in Business Analytics, I delved deep into the world of data-driven decision-making. From exploring complex datasets to developing predictive models, every challenge fueled my passion for analytics and its potential to drive business growth.</p>
+            <p class="mb-8 leading-relaxed">One of the highlights of my career was my role in a tech startup where I had the opportunity to lead a team of talented individuals. Together, we transformed innovative ideas into reality, pushing the boundaries of what was thought possible.</p>
+            <p class="mb-8 leading-relaxed">But it's not just about the technology for me. It's about the impact it has on people's lives. Whether it's improving healthcare outcomes through AI-driven diagnostics or enhancing customer experiences through personalized recommendations, I'm driven by the belief that technology can be a force for good.</p>
+            <p class="mb-8 leading-relaxed">When I'm not coding or exploring the latest advancements in AI, you can find me hiking in the great outdoors or losing myself in a good book. I believe in the importance of work-life balance and find inspiration in nature and the stories of others.</p>
+            <div class="flex justify-center md:justify-start">
+              <a href="#contact" class="inline-flex text-black bg-violet-500 border-0 py-2 px-6 focus:outline-none hover:bg-black-600 rounded text-lg">Hire Me</a>
+                <a href="#projects" class="ml-4 inline-flex text-violet-500 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">View Projects</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+    
+      
+<!-- Education Section -->
+<section id="education" class="text-violet-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <!-- Icon and Header -->
+    <div class="w-full mb-10">
+      <div class="flex items-center">
+        <i class="fas fa-graduation-cap fa-2x text-gray-800"></i> <!-- Education Icon -->
+        <h2 class="ml-4 text-3xl font-medium title-font">Education</h2>
+      </div>
+    </div>
+        <div class="flex flex-wrap -mx-4">
+            <!-- University of New Haven -->
+            <div class="md:w-1/2 px-4 mb-8">
+                <div class="py-8 flex flex-wrap md:flex-nowrap">
+                    <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                        <img src="UNH_logo.jpeg" alt="University of New Haven logo" class="w-16 h-16 mb-2">
+                        <span class="font-semibold title-font text-green-700">University of New Haven</span>
+                        <span class="text-sm text-green-500">Master of Science - MS, Business Analytics</span>
+                        <span class="text-sm text-green-500">Dec 2022 - May 2024</span>
+                        <span class="text-sm text-pink-500">Grade: 3.91/4.0</span>
+                        <span class="text-sm text-violet-500">Skills: Data Visualization · Operations Management · Supervided Machine Learning · Unsupervised Machine Learning · Data Mining · Microsoft Power BI · Business Analytics · Communication · Business Forecasting · Database Management for Business Analytics</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- DY Patil Institute of Distance Learning -->
+            <div class="md:w-1/2 px-4 mb-8">
+                <div class="py-8 flex flex-wrap md:flex-nowrap">
+                    <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                        <img src="DYPatil_logo.jpeg" alt="DY Patil Institute of Distance Learning logo" class="w-16 h-16 mb-2">
+                        <span class="font-semibold title-font text-green-700">DY Patil Institute of Distance Learning</span>
+                        <span class="text-sm text-green-500">Bachelor's degree, Information Technology, Bachelor's of Business Administration</span>
+                        <span class="text-sm text-green-500">May 2019 - Jun 2022</span>
+                        <span class="text-sm text-pink-500">Grade: 7.51/8.0 (G.P.A)</span>
+                        <span class="text-sm text-violet-500">Skills: SQL · Communication · Database Management System (DBMS) · Computer Science · Fundamentals of Marketing · Basics of Accounting </span>
+                    </div>
+                </div>
+            </div>
+            <!-- Add other education entries as needed -->
+        </div>
+    </div>
+</section>
+
+<hr>
+
+
+<section id="experience" class="text-violet-600 body-font bg-blue-100 dark:bg-blue-800">
+  <div class="container px-5 py-24 mx-auto">
+    <!-- Icon and Header -->
+    <div class="w-full mb-10">
+      <div class="flex items-center">
+        <i class="fas fa-briefcase fa-2x text-gray-800"></i> <!-- Career Icon -->
+        <h2 class="ml-4 text-3xl font-medium title-font">Experience</h2>
+      </div>
+    </div>
+    <div class="-my-8 divide-y-2 divide-gray-100">
+      <!-- AI Software Engineer at Sequel -->
+      <div class="py-8 flex flex-wrap md:flex-nowrap">
+        <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+          <img src="sql.png" alt="Sequel Logo" class="w-16 h-16 mb-2">
+          <span class="font-semibold title-font text-green-700">AI Software Engineer at Sequel (Internship)</span>
+          <span class="text-sm text-pink-500">Aug 2023 - Mar 2024 · 8 mos</span>
+          <span class="text-sm text-pink-500">Florida, United States · Remote</span>
+        </div>
+        <div class="md:flex-grow">
+          <ul class="list-disc pl-5">
+            <li>Collaborated closely with cross-functional teams to seamlessly integrate AI-driven features into the platform's ecosystem.</li>
+            <li>Researched and implemented cutting-edge AI technologies to stay ahead of industry trends.</li>
+            <li>Created a responsive front-end with React for a user-friendly interface.</li>
+            <li>Engineered a feedback modal for improved user engagement and feedback collection.</li>
+            <li>Established a scalable back-end with Node.js and Express.js, enhancing system reliability.</li>
+            <li>Used MongoDB to ensure efficient and reliable database management.</li>
+            <li>Deployed applications to cloud servers for global accessibility.</li>
+            <li>Secured the application with robust authentication and authorization measures.</li>
+            <li>Developed private npm packages to streamline and standardize company-wide codebases.</li>
+          </ul>
+        </div>
+      </div>
+            <!-- Data Scientist at Tech Mahindra -->
+            <div class="py-8 flex flex-wrap md:flex-nowrap">
+              <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                <img src="techml.webp" alt="Tech Mahindra Logo" class="w-16 h-16 mb-2">
+                <span class="font-semibold title-font text-green-700">Data Scientist at Tech Mahindra</span>
+                <span class="text-sm text-pink-500">Nov 2020 - Nov 2022 · 2 yrs 1 mo</span>
+                <span class="text-sm text-pink-500">On-site</span>
+              </div>
+              <div class="md:flex-grow">
+                <ul class="list-disc pl-5">
+                  <li>Leveraged diverse data sources and advanced analytical methods to provide comprehensive analysis and strategic recommendations for complex business problems, resulting in a 20% increase in profitability across products and services.</li>
+                  <li>Collaborated with internal stakeholders to gather analytical requirements and utilized statistical and algebraic techniques to interpret key insights from data, enabling informed decision-making for customer, product, and project needs, leading to 15% faster decision-making.</li>
+                  <li>Developed and implemented machine learning models to optimize real-time recommendation systems, resulting in improved user experiences and increased customer engagement, leading to 20% higher customer satisfaction and retention rates.</li>
+                  <li>Utilized Scrum methodology to effectively manage multiple priorities and deliver high-quality solutions within tight schedules.</li>
+                  <li>Applied data science techniques, including unsupervised learning, computer vision, and deep learning, to extract meaningful insights from large datasets, enabling data-driven decision-making and driving 10% revenue growth.</li>
+                  <li>Designed and optimized databases and data storage solutions, ensuring efficient 30% faster data retrieval and maintaining data integrity.</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Data Analyst at Mphasis -->
+            <div class="py-8 flex flex-wrap md:flex-nowrap">
+              <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                <img src="mphl.webp" alt="Mphasis Logo" class="w-16 h-16 mb-2">
+                <span class="font-semibold title-font text-green-700">Data Analyst at Mphasis</span>
+                <span class="text-sm text-pink-500">May 2019 - Oct 2020 · 1 yr 6 mos</span>
+                <span class="text-sm text-pink-500">Pune, Maharashtra, India · On-site</span>
+              </div>
+              <div class="md:flex-grow">
+                <ul class="list-disc pl-5">
+                  <li>Developed Excel documents to efficiently extract metrics data and deliver concise insights to stakeholders, facilitating optimal resource allocation decisions.</li>
+                  <li>Conducted software training sessions to enhance data management skills among employees, monitored usage, and provided suggestions for process improvements.</li>
+                  <li>Generated monthly reports utilizing advanced Excel spreadsheet functions, providing valuable analysis and insights.</li>
+                  <li>Orchestrated the coordination of statistical data analysis, design, and streamlined information flow processes.</li>
+                  <li>Utilized data visualization tools to present findings and communicate complex data analysis in a clear and concise manner.</li>
+                  <li>Collaborated with cross-functional teams to identify data needs, gather requirements, and deliver actionable insights to support business decision-making.</li>
+                  <li>Conducted in-depth data analysis to identify trends, patterns, and anomalies, providing valuable insights and recommendations to drive business performance.</li>
+                  <li>Implemented data quality control measures to ensure accuracy, completeness, and integrity of data sets used for analysis.</li>
+                  <li>Developed and maintained data dashboards and automated reporting processes to provide real-time visibility into key performance metrics.</li>
+                  <li>Proactively identified opportunities for process improvement and implemented data-driven solutions to enhance operational efficiency.</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Volunteer Experience -->
+            <div class="py-8 flex flex-wrap md:flex-nowrap">
+              <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                <img src="DYPatil_logo.jpeg" alt="DY Patil Institute of Distance Learning logo" class="w-16 h-16 mb-2">
+                <span class="font-semibold title-font text-green-700">Head of Cultural Programs, DY Patil College</span>
+                <span class="text-sm text-pink-500">Volunteer Experience</span>
+              </div>
+              <div class="md:flex-grow">
+                <ul class="list-disc pl-5">
+<li>As the Head of Cultural Programs at DY Patil College, I led the planning and execution of various cultural events, showcasing my leadership and organizational skills.</li>
+             <li>This role enabled me to foster a vibrant campus culture, enhancing student engagement and participation in extracurricular activities.</li>
+             </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <hr>
+
+<!-- Projects section -->
+<section id="projects" class="text-violet-600 body-font bg-pink-100 dark:bg-pink-800">
+  <div class="container px-5 py-12 mx-auto">
+      <h2 class="text-3xl font-medium text-violet-900 title-font mb-4">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="mb-4">
+              <img src="Shiny.png" alt="U.S. Wealth Distribution Dashboard" class="w-full h-64 object-cover object-center mb-2">
+              <h3 class="text-xl font-semibold mb-1">U.S. Wealth Distribution Dashboard</h3>
+              <p class="text-sm text-green-500 mb-2">Feb 2024 - Feb 2024</p>
+              <p class="mb-4">Associated with University of New Haven</p>
+              <p class="mb-4">Just launched a new Shiny Dashboard that delves into the fascinating world of wealth distribution in the U.S., highlighting the disparities across racial, generational, and educational lines. 🌟📈</p>
+              <p class="mb-4">This app brings to life the data from reputable sources such as Forbes and Wikipedia, allowing us to explore:</p>
+              <ul class="list-disc pl-5 mb-4">
+                  <li>The significant differences in wealth among various racial and generational demographics.</li>
+                  <li>The critical role of education in enhancing an individual's net worth, underlining the undeniable power of higher education in the pursuit of wealth.</li>
+              </ul>
+              <p class="mb-4">Skills: R Shiny · Dashboards</p>
+          </div>
+          <!-- Project 2 -->
+          <div class="mb-4">
+              <img src="think-together.jpeg" alt="Think-Together" class="w-full h-64 object-cover object-center mb-2">
+              <h3 class="text-xl font-semibold mb-1">Think-Together</h3>
+              <p class="text-sm text-green-500 mb-2">Nov 2023 - Dec 2023</p>
+              <p class="mb-4">Associated with Sequel</p>
+              <p class="mb-4">Welcome to Think Together, your expert in Natural Language Processing (NLP) and Code Generation, developed by Ritik Mishra.</p>
+              <p class="mb-4">Key Features:</p>
+              <ul class="list-disc pl-5 mb-4">
+                  <li>Generate creative text formats.</li>
+                  <li>Answer user questions informatively.</li>
+              </ul>
+              <p class="mb-4">Skills: Machine Learning · Google API · Natural Language Processing (NLP) · Python (Programming Language) · Application Programming Interfaces (API)</p>
+              <p class="mb-4">GitHub: <a href="#" class="text-blue-500">RitikMishra1/Think-Together</a></p>
+          </div>
+          <!-- Project 3 -->
+          <div class="mb-4">
+              <img src="music.png" alt="Music Genre ML" class="w-full h-64 object-cover object-center mb-2">
+              <h3 class="text-xl font-semibold mb-1">Music Genre ML</h3>
+              <p class="text-sm text-green-500 mb-2">May 2023 - Jun 2023</p>
+              <p class="mb-4">Associated with University of New Haven</p>
+              <p class="mb-4">Developed a machine learning model to automatically classify music tracks into different genres based on audio features using Librosa and TensorFlow.</p>
+              <p class="mb-4">Skills: Machine Learning · TensorFlow · Librosa</p>
+              <p class="mb-4">GitHub: <a href="#" class="text-blue-500">RitikMishra1/Music-Genre-ML</a></p>
+          </div>
+          <!-- Project 4 -->
+          <div class="mb-4">
+              <img src="cost.jpeg" alt="Cost Reduction Visualization Initiative" class="w-full h-64 object-cover object-center mb-2">
+              <h3 class="text-xl font-semibold mb-1">Cost Reduction Visualization Initiative</h3>
+              <p class="text-sm text-green-500 mb-2">Feb 2023 - Apr 2023</p>
+              <p class="mb-4">Associated with University of New Haven</p>
+              <p class="mb-4">Created and presented data visualizations that led to a 10% cost reduction in operations management, enabling informed decision-making.</p>
+              <p class="mb-4">Skills: Communication · Data-driven Decision Making · Operations Management · Data Analysis · Data Visualization</p>
+          </div>
+          <!-- Project 5 -->
+          <div class="mb-4">
+              <img src="sentiment.webp" alt="Sentiment Analysis Enhancement" class="w-full h-64 object-cover object-center mb-2">
+              <h3 class="text-xl font-semibold mb-1">Sentiment Analysis Enhancement</h3>
+              <p class="text-sm text-green-500 mb-2">Apr 2022 - Nov 2022</p>
+              <p class="mb-4">Associated with Tech Mahindra</p>
+              <p class="mb-4">Developed a natural language processing model to analyze customer sentiment, resulting in a 15% increase in customer satisfaction by improving product feedback.</p>
+              <p class="mb-4">Skills: Model evaluation and validation · Natural Language Processing (NLP) · Machine Learning algorithms for sentiment analysis · Statistical analysis and interpretation</p>
+          </div>
+          <!-- Project 6 -->
+          <div class="mb-4">
+              <img src="restro.webp" alt="Restaurant Inventory Management System (RIMS)" class="w-full h-64 object-cover object-center mb-2">
+              <h3 class="text-xl font-semibold mb-1">Restaurant Inventory Management System (RIMS)</h3>
+              <p class="text-sm text-green-500 mb-2">Nov 2021 - Feb 2022</p>
+              <p class="mb-4">Associated with DY Patil Institute of Distance Learning</p>
+              <p class="mb-4">Designed and developed a Restaurant Inventory Management System (RIMS) using PHP and Java with SQL, optimizing stock tracking, predicting re-ordering needs, and streamlining restaurant inventory management processes.</p>
+              <p class="mb-4">Skills: Database Management System (DBMS) · Problem Solving · Predictive Analytics</p>
+          </div>
+          <!-- Add more projects here -->
+      </div>
+  </div>
+</section>
+
+
+
+<hr>
+
+
+<!-- Skills section -->
+<section id="skills" class="text-violet-600 body-font bg-green-100 dark:bg-yellow-800">
+  <div class="container px-5 py-12 mx-auto">
+    <h2 class="text-3xl font-medium text-violet-900 title-font mb-4">Skills</h2>
+    <div class="skills-container">
+      <div class="skills flex flex-nowrap lg:ml-40 md:ml-20 ml-10">
+        <!-- Python -->
+        <div class="inline-block px-3">
+          <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+            <i class="fab fa-python fa-2x text-blue-500"></i>
+          </div>
+          <span class="text-sm font-medium text-violet-700">Python</span>
+        </div>
+        <!-- JavaScript -->
+        <div class="inline-block px-3">
+          <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+            <i class="fab fa-js-square fa-2x text-yellow-500"></i>
+          </div>
+          <span class="text-sm font-medium text-violet-700">JavaScript</span>
+        </div>
+        <!-- HTML5 -->
+        <div class="inline-block px-3">
+          <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+            <i class="fab fa-html5 fa-2x text-orange-500"></i>
+          </div>
+          <span class="text-sm font-medium text-violet-700">HTML5</span>
+        </div>
+        <!-- CSS3 -->
+        <div class="inline-block px-3">
+          <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+            <i class="fab fa-css3-alt fa-2x text-blue-500"></i>
+          </div>
+          <span class="text-sm font-medium text-violet-700">CSS3</span>
+        </div>
+        <!-- React -->
+        <div class="inline-block px-3">
+          <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+            <i class="fab fa-react fa-2x text-cyan-500"></i>
+          </div>
+          <span class="text-sm font-medium text-violet-700">React</span>
+        </div>
+        <!-- Node.js -->
+        <div class="inline-block px-3">
+          <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+            <i class="fab fa-node-js fa-2x text-green-500"></i>
+          </div>
+          <span class="text-sm font-medium text-violet-700">Node.js</span>
+        </div>
+        <!-- Database (Generic Icon) -->
+        <div class="inline-block px-3">
+          <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+            <i class="fas fa-database fa-2x text-green-600"></i>
+          </div>
+          <span class="text-sm font-medium text-violet-700">SQL</span>
+        </div>
+        <!-- Git -->
+        <div class="inline-block px-3">
+          <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+            <i class="fab fa-git-alt fa-2x text-red-500"></i>
+          </div>
+          <span class="text-sm font-medium text-violet-700">Git</span>
+        </div>
+        <!-- AWS -->
+        <div class="inline-block px-3">
+          <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+            <i class="fab fa-aws fa-2x text-orange-600"></i>
+          </div>
+          <span class="text-sm font-medium text-violet-700">AWS</span>
+        </div>
+        <!-- Java -->
+        <div class="inline-block px-3">
+          <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+            <i class="fab fa-java fa-2x text-purple-500"></i>
+          </div>
+          <span class="text-sm font-medium text-violet-700">Java</span>
+        </div>
+        <!-- R -->
+        <div class="inline-block px-3">
+          <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+            <i class="fas fa-laptop-code fa-2x text-red-400"></i> <!-- Using a generic code icon for R -->
+          </div>
+          <span class="text-sm font-medium text-violet-700">R</span>
+        </div>
+        <!-- SQL -->
+        <div class="inline-block px-3">
+          <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+            <i class="fas fa-database fa-2x text-teal-500"></i>
+          </div>
+          <span class="text-sm font-medium text-violet-700">SQL</span>
+        </div>
+        <!-- Tableau -->
+        <div class="inline-block px-3">
+          <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+            <i class="fas fa-chart-bar fa-2x text-green-500"></i> <!-- Using a bar chart icon for Tableau -->
+          </div>
+          <span class="text-sm font-medium text-violet-700">Tableau</span>
+        </div>
+        <!-- TensorFlow -->
+        <div class="inline-block px-3">
+          <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+            <i class="fas fa-brain fa-2x text-pink-500"></i> <!-- Using a brain icon as a metaphor for AI/ML -->
+          </div>
+          <span class="text-sm font-medium text-violet-700">TensorFlow</span>
+        </div>
+        <!-- Excel -->
+        <div class="inline-block px-3">
+          <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+            <i class="fas fa-file-excel fa-2x text-green-600"></i>
+          </div>
+          <span class="text-sm font-medium text-violet-700">Excel</span>
+        </div>
+        <!-- GitLab -->
+        <div class="inline-block px-3">
+          <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+            <i class="fab fa-gitlab fa-2x text-orange-500"></i>
+          </div>
+          <span class="text-sm font-medium text-violet-700">GitLab</span>
+        </div>
+        <!-- Power BI -->
+        <div class="inline-block px-3">
+          <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+            <i class="fas fa-chart-line fa-2x text-blue-400"></i> <!-- Using a line chart icon for Power BI -->
+          </div>
+          <span class="text-sm font-medium text-violet-700">Power BI</span>
+        </div>
+                <!-- C++ -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fas fa-code fa-2x text-blue-600"></i> <!-- Generic code icon for C++ -->
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">C++</span>
+                </div>
+                <!-- C# -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fas fa-code fa-2x text-purple-600"></i> <!-- Generic code icon for C# -->
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">C#</span>
+                </div>
+                <!-- Scikit-Learn -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fas fa-robot fa-2x text-green-500"></i> <!-- Robot icon for ML libraries -->
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">Scikit-Learn</span>
+                </div>
+                <!-- Keras -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fas fa-project-diagram fa-2x text-red-500"></i> <!-- Diagram icon for Keras -->
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">Keras</span>
+                </div>
+                <!-- PyTorch -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fas fa-fire fa-2x text-orange-500"></i> <!-- Fire icon, a playful nod to "Torch" -->
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">PyTorch</span>
+                </div>
+                <!-- MySQL -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fas fa-database fa-2x text-blue-500"></i> <!-- Database icon for MySQL -->
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">MySQL</span>
+                </div>
+                <!-- MongoDB -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fas fa-leaf fa-2x text-green-600"></i> <!-- Leaf icon for MongoDB -->
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">MongoDB</span>
+                </div>
+                <!-- Bootstrap -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fab fa-bootstrap fa-2x text-purple-500"></i>
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">Bootstrap</span>
+                </div>
+                <!-- Flask -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fas fa-flask fa-2x text-yellow-600"></i> <!-- Flask icon for Flask -->
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">Flask</span>
+                </div>
+                <!-- Docker -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fab fa-docker fa-2x text-blue-300"></i>
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">Docker</span>
+                </div>
+                <!-- Apache Kafka -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fas fa-stream fa-2x text-orange-400"></i> <!-- Stream icon as a metaphor for Kafka streams -->
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">Apache Kafka</span>
+                </div>
+                <!-- Linux -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fab fa-linux fa-2x text-black"></i>
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">Linux</span>
+                </div>
+                <!-- GraphQL -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fas fa-code-branch fa-2x text-pink-400"></i> <!-- Code branch icon, suggesting the branching nature of GraphQL -->
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">GraphQL</span>
+                </div>
+                <!-- Teamwork -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fas fa-users fa-2x text-blue-400"></i>
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">Teamwork</span>
+                </div>
+                <!-- Leadership -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fas fa-user-tie fa-2x text-green-500"></i>
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">Leadership</span>
+                </div>
+                <!-- Communication -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fas fa-comments fa-2x text-yellow-600"></i>
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">Communication</span>
+                </div>
+                <!-- Problem Solving -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fas fa-lightbulb fa-2x text-orange-500"></i>
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">Problem Solving</span>
+                </div>
+                <!-- Creativity -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fas fa-paint-brush fa-2x text-red-400"></i>
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">Creativity</span>
+                </div>
+                <!-- Time Management -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fas fa-clock fa-2x text-purple-500"></i>
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">Time Management</span>
+                </div>
+                <!-- Adaptability -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fas fa-water fa-2x text-cyan-500"></i> <!-- Water symbolizes adaptability and flexibility -->
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">Adaptability</span>
+                </div>
+                <!-- Work Ethic -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fas fa-briefcase fa-2x text-gray-600"></i>
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">Work Ethic</span>
+                </div>
+                <!-- Critical Thinking -->
+                <div class="inline-block px-3">
+                  <div class="w-16 h-16 mb-1 border rounded-full flex items-center justify-center">
+                    <i class="fas fa-brain fa-2x text-pink-500"></i>
+                  </div>
+                  <span class="text-sm font-medium text-violet-700">Critical Thinking</span>
+                </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<hr>
+
+
+<section id="achievements" class="text-violet-600 body-font">
+  <div class="container mx-auto px-5 py-24">
+    <h2 class="text-3xl font-medium text-violet-900 title-font mb-4">Achievements</h2>
+    <div class="flex flex-wrap -m-4">
+      
+      <!-- Pat on the Back Award -->
+      <div class="p-4 md:w-1/4">
+        <div class="achievement-frame">
+          <img class="lg:h-48 md:h-36 w-full object-contain" src="Pat on Back.pdf" alt="Pat on Back Award">
+          <p class="text-center mt-2">Recognized for exceptional teamwork and going above and beyond in project collaboration.</p>
+        </div>
+      </div>
+
+      <!-- Bravo Award -->
+      <div class="p-4 md:w-1/4">
+        <div class="achievement-frame">
+          <img class="lg:h-48 md:h-36 w-full object-contain" src="Bravo.pdf" alt="Bravo Award">
+          <p class="text-center mt-2">Awarded for outstanding performance and dedication to achieving company goals.</p>
+        </div>
+      </div>
+
+      <!-- Leads Database Achievement -->
+      <div class="p-4 md:w-1/4">
+        <div class="achievement-frame">
+          <img class="lg:h-48 md:h-36 w-full object-contain" src="Database.mov" alt="Leads Database Achievement">
+          <p class="text-center mt-2">Led the development of a comprehensive leads database, resulting in improved sales strategies.</p>
+        </div>
+      </div>
+
+      <!-- Bay Decoration Competition -->
+      <div class="p-4 md:w-1/4">
+        <div class="achievement-frame">
+          <img class="lg:h-48 md:h-36 w-full object-contain" src="Bay_Decoration.jpeg" alt="Bay Decoration Competition">
+          <p class="text-center mt-2">Victorious in the office bay decoration competition, showcasing creativity and team spirit.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <hr>
+
+
+  
+<!-- Letters of Recommendation Section -->
+<section id="lors" class="text-violet-600 body-font bg-gray-100">
+  <div class="container px-5 py-24 mx-auto">
+    <h2 class="text-3xl font-medium text-violet-900 title-font mb-12 text-center">Letters of Recommendation</h2>
+    <div class="flex flex-wrap -m-4 justify-center">
+
+      <!-- LOR 1 -->
+      <div class="p-4 md:w-1/4 sm:w-1/2">
+        <div class="lor-card rounded-lg overflow-hidden shadow-lg">
+          <img class="w-full h-64 object-cover cursor-pointer" src="Vartika_lor.png" alt="Letter of Recommendation from Vartika Sharma" onclick="openModal('modalVartika')">
+          <div class="lor-info">
+            <h5>Vartika Sharma</h5>
+            <p>Senior Manager at Tech Mahindra</p>
+          </div>
+        </div>
+      </div>
+      <!-- Modal for LOR 1 -->
+      <div id="modalVartika" class="modal">
+        <span class="close" onclick="closeModal('modalVartika')">&times;</span>
+        <img class="modal-content" id="imgVartika">
+        <div id="captionVartika"></div>
+      </div>
+
+      <!-- LOR 2 -->
+      <div class="p-4 md:w-1/4 sm:w-1/2">
+        <div class="lor-card rounded-lg overflow-hidden shadow-lg">
+          <img class="w-full h-64 object-cover cursor-pointer" src="Prakash_lor.png" alt="Letter of Recommendation from Prakash Gupta" onclick="openModal('modalPrakash')">
+          <div class="lor-info">
+            <h5>Prakash Gupta</h5>
+            <p>Assistant Manager at Tech Mahindra</p>
+          </div>
+        </div>
+      </div>
+      <!-- Modal for LOR 2 -->
+      <div id="modalPrakash" class="modal">
+        <span class="close" onclick="closeModal('modalPrakash')">&times;</span>
+        <img class="modal-content" id="imgPrakash">
+        <div id="captionPrakash"></div>
+      </div>
+
+      <!-- LOR 3 -->
+      <div class="p-4 md:w-1/4 sm:w-1/2">
+        <div class="lor-card rounded-lg overflow-hidden shadow-lg">
+          <img class="w-full h-64 object-cover cursor-pointer" src="Gazi_lor.png" alt="Letter of Recommendation from Gazi Murat Duman" onclick="openModal('modalGazi')">
+          <div class="lor-info">
+            <h5>Gazi Murat Duman</h5>
+            <p>Professor at University of New Haven</p>
+          </div>
+        </div>
+      </div>
+      <!-- Modal for LOR 3 -->
+      <div id="modalGazi" class="modal">
+        <span class="close" onclick="closeModal('modalGazi')">&times;</span>
+        <img class="modal-content" id="imgGazi">
+        <div id="captionGazi"></div>
+      </div>
+
+      <!-- LOR 4 -->
+      <div class="p-4 md:w-1/4 sm:w-1/2">
+        <div class="lor-card rounded-lg overflow-hidden shadow-lg">
+          <img class="w-full h-64 object-cover cursor-pointer" src="Ellen_lor.png" alt="Letter of Recommendation from Ellen Kramer" onclick="openModal('modalEllen')">
+          <div class="lor-info">
+            <h5>Ellen Kramer</h5>
+            <p>Professor at University of New Haven</p>
+          </div>
+        </div>
+      </div>
+      <!-- Modal for LOR 4 -->
+      <div id="modalEllen" class="modal">
+        <span class="close" onclick="closeModal('modalEllen')">&times;</span>
+        <img class="modal-content" id="imgEllen">
+        <div id="captionEllen"></div>
+      </div>
+
+      <!-- LOR 5 -->
+      <div class="p-4 md:w-1/4 sm:w-1/2">
+        <div class="lor-card rounded-lg overflow-hidden shadow-lg">
+          <img class="w-full h-64 object-cover cursor-pointer" src="Trevor_lor.png" alt="Letter of Recommendation from Trevor Paladino" onclick="openModal('modalTrevor')">
+          <div class="lor-info">
+            <h5>Trevor Paladino</h5>
+            <p>CEO and Managing Partner at Redwave Ventures and Sequel (startup)</p>
+          </div>
+        </div>
+      </div>
+      <!-- Modal for LOR 5 -->
+      <div id="modalTrevor" class="modal">
+        <span class="close" onclick="closeModal('modalTrevor')">&times;</span>
+        <img class="modal-content" id="imgTrevor">
+        <div id="captionTrevor"></div>
+      </div>
+
+      <!-- LOR 6 -->
+      <div class="p-4 md:w-1/4 sm:w-1/2">
+        <div class="lor-card rounded-lg overflow-hidden shadow-lg">
+          <img class="w-full h-64 object-cover cursor-pointer" src="Ganesh_lor.png" alt="Letter of Recommendation from Ganesh Datare" onclick="openModal('modalGanesh')">
+          <div class="lor-info">
+            <h5>Ganesh Datare</h5>
+            <p>Professor at DY Patil University</p>
+          </div>
+        </div>
+      </div>
+      <!-- Modal for LOR 6 -->
+      <div id="modalGanesh" class="modal">
+        <span class="close" onclick="closeModal('modalGanesh')">&times;</span>
+        <img class="modal-content" id="imgGanesh">
+        <div id="captionGanesh"></div>
+      </div>
+
+      <!-- LOR 7 -->
+      <div class="p-4 md:w-1/4 sm:w-1/2">
+        <div class="lor-card rounded-lg overflow-hidden shadow-lg">
+          <img class="w-full h-64 object-cover cursor-pointer" src="Anand_lor.png" alt="Letter of Recommendation from Anand Irabatti" onclick="openModal('modalAnand')">
+          <div class="lor-info">
+            <h5>Anand Irabatti</h5>
+            <p>Professor at DY Patil University</p>
+          </div>
+        </div>
+      </div>
+      <!-- Modal for LOR 7 -->
+      <div id="modalAnand" class="modal">
+        <span class="close" onclick="closeModal('modalAnand')">&times;</span>
+        <img class="modal-content" id="imgAnand">
+        <div id="captionAnand"></div>
+      </div>
+
+      <!-- LOR 8 -->
+      <div class="p-4 md:w-1/4 sm:w-1/2">
+        <div class="lor-card rounded-lg overflow-hidden shadow-lg">
+          <img class="w-full h-64 object-cover cursor-pointer" src="Aksoy_lor.png" alt="Letter of Recommendation from Fazli Mert Aksoy" onclick="openModal('modalAksoy')">
+          <div class="lor-info">
+            <h5>Fazli Mert Aksoy</h5>
+            <p>Professor at University of New Haven</p>
+          </div>
+        </div>
+      </div>
+      <!-- Modal for LOR 8 -->
+      <div id="modalAksoy" class="modal">
+        <span class="close" onclick="closeModal('modalAksoy')">&times;</span>
+        <img class="modal-content" id="imgAksoy">
+        <div id="captionAksoy"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  
+  <hr>
+
+  <section id="contact" class="text-gray-600 body-font bg-orange-100 dark:bg-purple-800 relative py-16">
+    <div class="container px-5 mx-auto">
+      <h2 class="text-3xl font-medium text-yellow-900 title-font mb-8 text-center">Let's Connect</h2>
+      <div class="flex flex-wrap -mx-4 -mb-4 md:mb-0 justify-center">
+        <div class="w-full md:w-1/2 px-4 mb-4 md:mb-0">
+          <p class="text-lg mb-4">I'm open to inquiries, collaboration opportunities, and general chat. Feel free to reach out!</p>
+          <ul class="list-disc pl-5 text-center">
+            <li class="mb-2"><strong>Email:</strong> <a href="mailto:rmish5@unh.newhaven.edu" class="text-indigo-500">rmish5@unh.newhaven.edu</a></li>
+            <li class="mb-2"><strong>Phone:</strong> +1 475 287 3335</li>
+            <li class="mb-2"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ritik-mishra1/" class="text-indigo-500">Your LinkedIn</a></li>
+          </ul>
+        </div>
+        <div class="w-full md:w-1/2 px-4 text-center">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <p class="text-gray-800 mb-4">Drop me a message if you have any questions, ideas, or just want to chat!</p>
+            <button onclick="location.href='mailto:placeholder-email@example.com'" class="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-6 rounded-full transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500">Start Chatting</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <hr>
+  
+  <footer class="text-gray-600 body-font bg-gray-200 dark:bg-gray-800">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <span class="ml-3 text-xl">Ritik Mishra</span>
+      </a>
+      <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© 2024 Ritik Mishra —
+        <a href="mailto:rmish5@unh.newhaven.edu" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">rmish5@unh.newhaven.edu</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a href="https://github.com/RitikMishra1" class="text-gray-500">
+          <!-- GitHub SVG icon -->
+        </a>
+        <a href="https://www.linkedin.com/in/ritik-mishra1/" class="ml-3 text-gray-500">
+          <!-- LinkedIn SVG icon -->
+        </a>
+        <!-- Add other social links with icons here -->
+      </span>
+    </div>
+  </footer>
+
+    <script>
+      function startEmail() {
+        window.location.href = "mailto:rmish5@unh.newhaven.edu";
+      }
+    </script>
+    
+
+  <!-- Theme Toggle Script -->
+  <script src="theme-toggle.js"></script>
+  </body>
+  </html>
+  
+
+</body>
+</html>

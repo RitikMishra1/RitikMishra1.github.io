@@ -1,0 +1,518 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: #4A4A4A;
+  background-color: #F5F5F5;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #3498DB;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2980B9;
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 0;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: #FFFFFF;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+header a {
+  color: #FFC107;
+  font-weight: 500;
+}
+
+header nav a:hover {
+  color: #F1C40F;
+}
+
+/* Main Styling */
+.main {
+  padding: 20px;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/* Section Styling */
+section {
+  padding: 60px 0;
+}
+
+section:nth-of-type(even) {
+  background-color: #FAFAFA;
+}
+
+/* Buttons */
+button,
+input[type="submit"],
+input[type="button"] {
+  background-color: #E74C3C;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background-color: #C0392B;
+}
+
+/* Cards */
+.card {
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+  background-color: #2C3E50;
+  color: #FFF;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: #3498DB;
+}
+
+.bg-dark {
+  background-color: #333 !important;
+  color: #fff;
+}
+
+.bg-light {
+  background-color: #F5F5F5 !important;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+
+/* Custom Scrollbar for Webkit */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F1F1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+/* Light theme styles (default) */
+body[data-theme="light"] {
+    background-color: #f5f5f5;
+    color: #4a4a4a;
+  }
+  
+  body[data-theme="light"] header,
+  body[data-theme="light"] footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+  }
+  
+  /* Dark theme styles */
+  body[data-theme="dark"] {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  body[data-theme="dark"] header,
+  body[data-theme="dark"] footer {
+    background-color: #121212;
+    color: #ffc107;
+  }
+  
+  body[data-theme="dark"] a {
+    color: #ffb347;
+  }
+  
+  body[data-theme="dark"] a:hover {
+    color: #ff8c00;
+  }
+  
+  /* Ensure that sections have clear contrast in dark mode */
+  body[data-theme="dark"] section {
+    background-color: #424242;
+  }
+  
+  body[data-theme="dark"] .card {
+    background-color: #212121;
+    color: #fff;
+  }
+  
+
+  .skills-container {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .skills {
+    display: inline-block;
+    padding-left: 100%; /* Initial position off-screen */
+    animation: scroll-skills 40s linear infinite;
+  }
+  
+  @keyframes scroll-skills {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+
+  /* achievements */
+.achievement-frame {
+    border: 3px solid #ffd700; /* Golden color frame */
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+  }
+  
+  .achievement-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Add this below your other .container styles to prevent overflow issues */
+  .container {
+    overflow: hidden;
+  }
+
+  
+/* LOR Card Style */
+.lor-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .lor-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Style the modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+    padding-top: 50px;
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Responsive modal content */
+  @media only screen and (max-width: 700px) {
+    .modal-content {
+      width: 95%;
+    }
+  }
+  
+
+
+
+  /* Style the modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+  
+  
+
+  /* About Me Section Styles */
+#about {
+    background-color: #fff7f7; /* A soft pink background */
+  }
+  
+  #about img {
+    border-radius: 50%; /* Circular image */
+    border: 6px solid #fff; /* White border for image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow around the image */
+  }
+  
+  #about .flex {
+    align-items: center; /* Center items vertically */
+  }
+  
+  #about i {
+    color: #4a4a4a; /* Icon color */
+  }
+  
+  #about h2 {
+    color: #2c3e50; /* Header color */
+    margin-bottom: 10px; /* Space below the header */
+  }
+  
+  #about p {
+    color: #555; /* Paragraph text color */
+    font-size: 1.125rem; /* Larger font size for the paragraph */
+  }
+  
+  #about a {
+    margin-right: 5px; /* Space between buttons */
+    border: 2px solid transparent; /* Transparent border for a clean button look */
+    padding: 10px 18px; /* Button padding */
+    transition: all 0.3s ease; /* Smooth transition for button states */
+  }
+  
+  #about a:hover {
+    border-color: #2c3e50; /* Border color on hover */
+  }
+  
+  /* Responsive Layout for About Me Section */
+  @media (min-width: 768px) {
+    #about {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  
+    #about .container {
+      flex-direction: row; /* Side-by-side layout on larger screens */
+    }
+  
+    #about img {
+      margin-right: 50px; /* Space between image and text */
+    }
+  }
+
+  
+  
+  /* Existing CSS ... */
+
+/* Contact Section */
+#contact {
+    background-color: #ffedcc; /* Light orange background for the contact section */
+    color: #333333; /* Dark text color for good contrast */
+  }
+  
+  #contact h2 {
+    color: #d97706; /* Darker orange color for the heading */
+  }
+  
+  #contact a {
+    color: #6366f1; /* Indigo color for links */
+  }
+  
+  #contact a:hover {
+    color: #4f46e5; /* Darker indigo on hover */
+  }
+  
+  #contact button {
+    background-color: #6366f1; /* Indigo background for buttons */
+    color: #ffffff; /* White text on buttons */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  #contact button:hover {
+    background-color: #4f46e5; /* Darker indigo on hover */
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #1e293b; /* Dark blue background for the footer */
+    color: #ffffff; /* White text color */
+  }
+  
+  footer a {
+    color: #fbbf24; /* Yellow color for footer links */
+  }
+  
+  footer a:hover {
+    color: #f59e0b; /* Darker yellow on hover */
+  }
+  
+  /* Utility classes for text and background colors */
+  .text-indigo-500 {
+    color: #6366f1;
+  }
+  
+  .bg-indigo-500 {
+    background-color: #6366f1;
+  }
+  
+  .bg-indigo-600:hover,
+  .bg-indigo-600:focus {
+    background-color: #4f46e5;
+  }
+  
+  /* Ensure contact buttons are centered on small screens */
+  @media (max-width: 768px) {
+    #contact .flex {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    #contact button {
+      margin-top: 20px; /* Add space above the button on small screens */
+    }
+  }
+  
+  /* Rest of your existing CSS... */
+  
