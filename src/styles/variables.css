@@ -1,0 +1,44 @@
+/* CSS Variables */
+:root {
+    --primary: #E50914;
+    /* Netflix Red */
+    --primary-hover: #F40612;
+    --primary-dark: #B20710;
+    --bg-primary: #141414;
+    /* Netflix Black */
+    --bg-secondary: #181818;
+    --bg-tertiary: #232323;
+    /* Dark Gray for cards */
+    --bg-card: #2f2f2f;
+    /* Slightly lighter for hover states */
+    --text-primary: #FFFFFF;
+    --text-secondary: #B3B3B3;
+    /* Netflix standard text gray */
+    --text-muted: #808080;
+    --accent-green: #46D369;
+    /* Match for 'Match' score */
+    --accent-gold: #FFD700;
+    --accent-blue: #667eea;
+    --accent-purple: #764ba2;
+    --border-color: #404040;
+
+    /* Z-Indices */
+    --z-modal-backdrop: 2000;
+    --z-modal-content: 2010;
+    --z-navbar: 1000;
+
+    /* Fonts */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Transitions */
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.6);
+    --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.8);
+}

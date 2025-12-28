@@ -1,0 +1,18 @@
+/* RITIKFLIX - MAANG-Ready Portfolio CSS */
+@import './variables.css';
+@import './base.css';
+@import './components/sections.css';
+@import './components/intro.css';
+@import './components/preloader.css';
+@import './components/profile-gate.css';
+@import './components/navbar.css';
+@import './components/hero.css';
+@import './components/impact.css';
+@import './components/experience.css';
+@import './components/projects.css';
+@import './components/skills.css';
+@import './components/about.css';
+@import './components/contact.css';
+@import './components/footer.css';
+@import './components/netflix-modal.css';
+@import './responsive.css';

@@ -1,0 +1,303 @@
+/* Experience Section */
+.experience-section {
+    background: var(--bg-primary);
+}
+
+.carousel-nav {
+    display: flex;
+    gap: 8px;
+}
+
+.carousel-arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.carousel-arrow:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--text-muted);
+}
+
+.experience-carousel {
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 16px;
+    transition: transform 0.5s ease;
+    padding: 10px 0;
+}
+
+.exp-card {
+    flex: 0 0 340px;
+    background: var(--bg-card);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.exp-card:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-xl);
+    z-index: 10;
+}
+
+.exp-card.featured-exp {
+    flex: 0 0 420px;
+}
+
+.exp-media {
+    position: relative;
+    /* height: 180px; Removed fixed height */
+    aspect-ratio: 16/9;
+    /* Netflix standard */
+    overflow: hidden;
+}
+
+.exp-media img,
+.exp-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition);
+}
+
+.exp-card:hover .exp-media img {
+    transform: scale(1.1);
+}
+
+.exp-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 4px 12px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.exp-badge.live {
+    background: var(--primary);
+    color: white;
+}
+
+.exp-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.exp-play i {
+    color: var(--bg-primary);
+    font-size: 1rem;
+    margin-left: 4px;
+}
+
+.exp-card:hover .exp-play {
+    opacity: 1;
+}
+
+.exp-content {
+    padding: 20px;
+}
+
+.exp-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.exp-match {
+    color: var(--accent-green);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.exp-date {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* Company Logo Styles */
+.exp-title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: white;
+    padding: 6px;
+}
+
+.company-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.company-logo i {
+    font-size: 1.2rem;
+}
+
+.company-logo span {
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.company-logo.dsquare {
+    background: linear-gradient(135deg, #059669 0%, #10B981 100%);
+    color: white;
+}
+
+.company-logo.confetti {
+    background: linear-gradient(135deg, #F97316 0%, #FB923C 100%);
+    color: white;
+}
+
+.exp-title-info h3 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.exp-title-info .exp-company {
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.exp-content h3 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.exp-company {
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.exp-highlights {
+    margin-bottom: 16px;
+}
+
+.exp-highlights li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    padding: 4px 0;
+}
+
+.exp-highlights i {
+    color: var(--accent-gold);
+    font-size: 0.7rem;
+    margin-top: 4px;
+}
+
+.exp-stack {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.exp-stack span {
+    background: var(--bg-tertiary);
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+/* Company Ticker */
+.company-ticker {
+    background: var(--bg-secondary);
+    padding: 20px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.ticker-label {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.ticker-track {
+    overflow: hidden;
+    position: relative;
+}
+
+.ticker-content {
+    display: flex;
+    gap: 60px;
+    animation: ticker 20s linear infinite;
+    width: max-content;
+}
+
+.ticker-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.ticker-item i {
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}

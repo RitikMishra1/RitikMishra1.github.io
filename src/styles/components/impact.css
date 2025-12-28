@@ -1,0 +1,225 @@
+/* Impact Section */
+.impact-section {
+    background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.impact-card {
+    background: var(--bg-card);
+    border-radius: 8px;
+    padding: 24px;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 40px rgba(229, 9, 20, 0.2);
+}
+
+.impact-card.featured {
+    grid-column: span 2;
+    display: flex;
+    gap: 24px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.impact-visual {
+    width: 300px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.impact-video,
+.impact-fallback {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.impact-content {
+    padding: 24px;
+    flex: 1;
+}
+
+.impact-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--bg-tertiary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.impact-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent-green);
+    margin-bottom: 8px;
+}
+
+.impact-card h3 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.impact-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.impact-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.impact-tags span {
+    background: var(--bg-tertiary);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.impact-bar {
+    height: 6px;
+    background: var(--bg-tertiary);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.impact-progress {
+    height: 100%;
+    background: var(--accent-green);
+    border-radius: 3px;
+    width: 0;
+    animation: progressFill 1.5s ease forwards;
+}
+
+@keyframes progressFill {
+    to {
+        width: var(--progress);
+    }
+}
+
+/* Big Stats Section */
+.big-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 50px;
+}
+
+.big-stat {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-tertiary) 100%);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.big-stat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent-gold));
+}
+
+.big-stat:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(229, 9, 20, 0.2);
+    border-color: var(--primary);
+}
+
+.big-stat-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.big-stat-value {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--text-primary);
+    line-height: 1;
+    margin-bottom: 8px;
+    font-family: var(--font-display);
+}
+
+.big-stat-suffix {
+    font-size: 1.1rem;
+    color: var(--accent-green);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.big-stat p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* MAANG Ready Section */
+.maang-ready {
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+}
+
+.maang-ready h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+}
+
+.maang-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.maang-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: var(--bg-tertiary);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.maang-item:hover {
+    transform: scale(1.05);
+}
+
+.maang-item i {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+}
+
+.maang-item span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}

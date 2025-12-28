@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ritik Mishra - AI/ML Engineer specializing in LLMs, Recommender Systems, and GenAI. Building production-ready ML solutions.">
+    <meta name="keywords"
+        content="AI Engineer, ML Engineer, LLM, GenAI, Recommender Systems, PyTorch, TensorFlow, Production ML">
+    <meta property="og:title" content="Ritik Mishra | AI/ML Engineer">
+    <meta property="og:description"
+        content="AI/ML Engineer building production-grade ML systems for enterprise clients">
+    <meta property="og:image" content="me.jpeg">
+    <title>RITIKFLIX | AI/ML Engineer | Production Ready</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="/me.jpeg">
+  <script type="module" crossorigin src="/assets/index-Ch9ZcBFa.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-A5e5EPiJ.css">
+</head>
+
+<body>
+    <!-- Netflix-Style Intro Animation -->
+    <div id="netflix-intro" class="netflix-intro">
+        <div class="intro-container">
+            <!-- Netflix-style R Letter Animation -->
+            <div class="netflix-letter" data-letter="R">
+                <svg viewBox="0 0 100 120" class="r-svg">
+                    <path
+                        d="M10 0 L10 120 L30 120 L30 70 L45 70 L70 120 L95 120 L65 65 C85 60 90 45 90 35 C90 10 70 0 45 0 Z M30 20 L45 20 C60 20 70 25 70 35 C70 45 60 50 45 50 L30 50 Z"
+                        fill="#e40913" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Skip hint -->
+        <div class="skip-hint">
+            <span class="sound-icon"><i class="fas fa-volume-up"></i></span>
+            Click anywhere to hear TA-DUM
+        </div>
+
+        <!-- Netflix TA-DUM Sound -->
+        <audio id="netflix-sound" preload="auto" crossorigin="anonymous">
+            <source src="sounds/tadum.mp3" type="audio/mpeg">
+            <source src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Preloader -->
+    <div id="preloader" class="preloader" style="display: none;">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <span class="logo-r">R</span>
+                <span class="logo-i">I</span>
+                <span class="logo-t">T</span>
+                <span class="logo-i2">I</span>
+                <span class="logo-k">K</span>
+                <span class="logo-f">F</span>
+                <span class="logo-l">L</span>
+                <span class="logo-i3">I</span>
+                <span class="logo-x">X</span>
+            </div>
+            <div class="preloader-tagline">Loading your next AI hire...</div>
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Selection -->
+    <div id="profile-gate" class="profile-gate">
+        <div id="particles-bg" class="particles-bg"></div>
+        <div class="gate-header">
+            <div class="gate-logo">RITIK<span>FLIX</span></div>
+        </div>
+        <div class="gate-content">
+            <h1 class="gate-title">Who's watching?</h1>
+            <p class="gate-subtitle">Select your perspective for a personalized experience</p>
+            <div class="profile-grid">
+                <div class="profile-card" data-profile="recruiter">
+                    <div class="profile-avatar-wrapper">
+                        <img src="https://img.icons8.com/3d-fluency/150/businessman.png" alt="Recruiter"
+                            class="profile-avatar-img">
+                        <div class="profile-glow recruiter"></div>
+                    </div>
+                    <h3>The Recruiter</h3>
+                    <p>Looking to hire top AI talent?</p>
+                    <div class="profile-preview">
+                        <span><i class="fas fa-briefcase"></i> Experience</span>
+                        <span><i class="fas fa-chart-line"></i> Impact</span>
+                        <span><i class="fas fa-graduation-cap"></i> Education</span>
+                    </div>
+                </div>
+                <div class="profile-card" data-profile="stalker">
+                    <div class="profile-avatar-wrapper">
+                        <img src="https://img.icons8.com/3d-fluency/150/binoculars.png" alt="Stalker"
+                            class="profile-avatar-img">
+                        <div class="profile-glow stalker"></div>
+                    </div>
+                    <h3>The Stalker</h3>
+                    <p>Just curious about me?</p>
+                    <div class="profile-preview">
+                        <span><i class="fas fa-heart"></i> Personal</span>
+                        <span><i class="fas fa-gamepad"></i> Hobbies</span>
+                        <span><i class="fas fa-laugh"></i> Fun Facts</span>
+                    </div>
+                </div>
+                <div class="profile-card" data-profile="techbro">
+                    <div class="profile-avatar-wrapper">
+                        <img src="https://img.icons8.com/3d-fluency/150/robot.png" alt="Tech Bro"
+                            class="profile-avatar-img">
+                        <div class="profile-glow techbro"></div>
+                    </div>
+                    <h3>The Tech Bro</h3>
+                    <p>Show me the code!</p>
+                    <div class="profile-preview">
+                        <span><i class="fas fa-code"></i> Projects</span>
+                        <span><i class="fas fa-layer-group"></i> Stack</span>
+                        <span><i class="fab fa-github"></i> GitHub</span>
+                    </div>
+                </div>
+                <div class="profile-card" data-profile="investor">
+                    <div class="profile-avatar-wrapper">
+                        <img src="https://img.icons8.com/3d-fluency/150/money-bag.png" alt="Investor"
+                            class="profile-avatar-img">
+                        <div class="profile-glow investor"></div>
+                    </div>
+                    <h3>The Investor</h3>
+                    <p>What's the ROI?</p>
+                    <div class="profile-preview">
+                        <span><i class="fas fa-dollar-sign"></i> Revenue</span>
+                        <span><i class="fas fa-users"></i> Scale</span>
+                        <span><i class="fas fa-trophy"></i> Results</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="main-app" class="main-app hidden">
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-left">
+                <div class="nav-logo" id="nav-logo">RITIK<span>FLIX</span></div>
+                <ul class="nav-menu">
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#impact">Impact</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <button class="nav-btn search-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="nav-btn notif-btn" aria-label="Notifications" id="notif-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notif-badge">7</span>
+                </button>
+                <div class="nav-socials">
+                    <a href="https://www.linkedin.com/in/ritik-mishra1/" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/ritikmishra1" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                </div>
+                <div class="nav-profile" id="nav-profile">
+                    <img src="me.jpeg" alt="Profile" class="nav-profile-img">
+                    <i class="fas fa-caret-down"></i>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section with Video & Particles -->
+        <section id="hero" class="hero-section">
+            <div id="hero-particles" class="hero-particles"></div>
+            <div class="hero-media">
+                <img src="images/stranger-things.gif" alt="Stranger Things Background" class="hero-video"
+                    style="object-fit: cover; width: 100%; height: 100%;">
+                <div class="hero-overlay"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-badge-row">
+                    <span class="hero-badge new">N</span>
+                    <span class="hero-badge-text">NEWLY AVAILABLE</span>
+                    <span class="hero-separator">|</span>
+                    <span class="hero-badge-text trending">TOP 1% AI TALENT</span>
+                </div>
+
+                <div class="hero-profile-section">
+                    <div class="hero-avatar">
+                        <img src="me.jpeg" alt="Ritik Mishra" class="hero-avatar-img">
+                        <div class="hero-avatar-ring"></div>
+                        <div class="hero-avatar-status">
+                            <span class="status-dot"></span>
+                            <span>Available</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 class="hero-title">RITIK MISHRA</h1>
+
+                <div class="hero-roles">
+                    <span class="role-item" id="typed-roles"></span>
+                </div>
+
+                <p class="hero-description" id="hero-desc">
+                    <!-- Dynamic based on profile -->
+                </p>
+
+                <!-- Impressive Animated Stats -->
+                <div class="hero-metrics">
+                    <div class="metric-item">
+                        <span class="metric-value" data-count="4.2" data-suffix="M+">0</span>
+                        <span class="metric-label">Revenue Influenced</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-value" data-count="12" data-suffix="M+">0</span>
+                        <span class="metric-label">Users Impacted</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-value" data-count="15" data-suffix="+">0</span>
+                        <span class="metric-label">Enterprise Clients</span>
+                    </div>
+                    <div class="metric-item highlight">
+                        <span class="metric-value" data-count="2.5" data-suffix="M">₹0</span>
+                        <span class="metric-label">Cost Saved</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="#contact" class="cta-btn primary">
+                        <i class="fas fa-play"></i>
+                        <span>Hire Me</span>
+                    </a>
+                    <a href="#impact" class="cta-btn secondary">
+                        <i class="fas fa-info-circle"></i>
+                        <span>View Impact</span>
+                    </a>
+                    <button class="cta-btn icon-btn" id="add-to-list" aria-label="Add to Shortlist">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <button class="cta-btn icon-btn" id="thumbs-up" aria-label="Like Profile">
+                        <i class="fas fa-thumbs-up"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-side-info">
+                <div class="maturity-rating">
+                    <span class="rating-box">PRODUCTION</span>
+                    <span class="rating-text">READY</span>
+                </div>
+            </div>
+
+            <button class="hero-mute-btn" id="mute-btn" aria-label="Mute Video">
+                <i class="fas fa-volume-xmark"></i>
+            </button>
+
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- Technology Stack Ticker -->
+        <div class="company-ticker">
+            <div class="ticker-label">Built with</div>
+            <div class="ticker-track">
+                <div class="ticker-content">
+                    <span class="ticker-item"><i class="fab fa-python"></i> Python</span>
+                    <span class="ticker-item"><i class="fas fa-fire"></i> PyTorch</span>
+                    <span class="ticker-item"><i class="fas fa-brain"></i> TensorFlow</span>
+                    <span class="ticker-item"><i class="fas fa-link"></i> LangChain</span>
+                    <span class="ticker-item"><i class="fas fa-robot"></i> OpenAI</span>
+                    <span class="ticker-item"><i class="fas fa-face-smile"></i> Hugging Face</span>
+                    <span class="ticker-item"><i class="fas fa-comments"></i> LLMs</span>
+                    <span class="ticker-item"><i class="fas fa-database"></i> RAG</span>
+                    <span class="ticker-item"><i class="fas fa-image"></i> Stable Diffusion</span>
+                    <span class="ticker-item"><i class="fab fa-aws"></i> AWS SageMaker</span>
+                    <span class="ticker-item"><i class="fab fa-aws"></i> AWS Bedrock</span>
+                    <span class="ticker-item"><i class="fab fa-aws"></i> AWS Lambda</span>
+                    <span class="ticker-item"><i class="fab fa-aws"></i> AWS S3</span>
+                    <span class="ticker-item"><i class="fab fa-aws"></i> AWS EC2</span>
+                    <span class="ticker-item"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+                    <span class="ticker-item"><i class="fab fa-docker"></i> Docker</span>
+                    <span class="ticker-item"><i class="fas fa-bolt"></i> Kafka</span>
+                    <span class="ticker-item"><i class="fas fa-stream"></i> Flink</span>
+                    <span class="ticker-item"><i class="fab fa-python"></i> Python</span>
+                    <span class="ticker-item"><i class="fas fa-fire"></i> PyTorch</span>
+                    <span class="ticker-item"><i class="fas fa-brain"></i> TensorFlow</span>
+                    <span class="ticker-item"><i class="fas fa-link"></i> LangChain</span>
+                    <span class="ticker-item"><i class="fas fa-robot"></i> OpenAI</span>
+                    <span class="ticker-item"><i class="fas fa-face-smile"></i> Hugging Face</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Impact Metrics Section -->
+        <section id="impact" class="impact-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2><i class="fas fa-chart-line"></i> Business Impact</h2>
+                    <p class="section-subtitle">Measurable results delivered for enterprise clients</p>
+                </div>
+
+                <!-- Massive Stats Counter -->
+                <div class="big-stats">
+                    <div class="big-stat">
+                        <div class="big-stat-icon"><i class="fas fa-project-diagram"></i></div>
+                        <div class="big-stat-value" data-count="10">0</div>
+                        <div class="big-stat-suffix">+ Projects Shipped</div>
+                        <p>Production ML systems delivered</p>
+                    </div>
+                    <div class="big-stat">
+                        <div class="big-stat-icon"><i class="fas fa-code"></i></div>
+                        <div class="big-stat-value" data-count="5">0</div>
+                        <div class="big-stat-suffix">+ Years Experience</div>
+                        <p>Building ML/AI solutions</p>
+                    </div>
+                    <div class="big-stat">
+                        <div class="big-stat-icon"><i class="fas fa-award"></i></div>
+                        <div class="big-stat-value" data-count="8">0</div>
+                        <div class="big-stat-suffix">Awards Received</div>
+                        <p>Recognition for excellence</p>
+                    </div>
+                    <div class="big-stat">
+                        <div class="big-stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="big-stat-value" data-count="3.60">0</div>
+                        <div class="big-stat-suffix">GPA (MS Analytics)</div>
+                        <p>University of New Haven</p>
+                    </div>
+                </div>
+
+                <div class="impact-grid">
+                    <div class="impact-card featured">
+                        <div class="impact-visual">
+                            <img src="/assets/cost_optimization-BhvLMG7T.jpg" alt="Cost Savings" class="impact-fallback" style="display: block;">
+                        </div>
+                        <div class="impact-content">
+                            <div class="impact-number">85%</div>
+                            <h3>Cost Optimization</h3>
+                            <p>Built Whisper-powered multilingual sentiment analysis, replacing expensive API calls.
+                                Optimized ML pipelines reducing operational costs significantly</p>
+                            <div class="impact-tags">
+                                <span>Whisper</span>
+                                <span>Cost Optimization</span>
+                                <span>NLP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="impact-card">
+                        <div class="impact-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="impact-number">10+</div>
+                        <h3>Projects Delivered</h3>
+                        <p>End-to-end ML solutions from prototype to production deployment</p>
+                        <div class="impact-bar">
+                            <div class="impact-progress" style="--progress: 95%"></div>
+                        </div>
+                    </div>
+
+                    <div class="impact-card">
+                        <div class="impact-icon"><i class="fas fa-bullseye"></i></div>
+                        <div class="impact-number">99.2%</div>
+                        <h3>Model Accuracy</h3>
+                        <p>Production-grade ensemble models with continuous A/B testing</p>
+                        <div class="impact-bar">
+                            <div class="impact-progress" style="--progress: 99%"></div>
+                        </div>
+                    </div>
+
+                    <div class="impact-card">
+                        <div class="impact-icon"><i class="fas fa-clock"></i></div>
+                        <div class="impact-number">
+                            &lt;50ms
+                        </div>
+                        <h3>Low Latency APIs</h3>
+                        <p>Production-grade ML inference with optimized response times</p>
+                        <div class="impact-bar">
+                            <div class="impact-progress" style="--progress: 98%"></div>
+                        </div>
+                    </div>
+
+                    <div class="impact-card">
+                        <div class="impact-icon"><i class="fas fa-arrow-up"></i></div>
+                        <div class="impact-number">99.9%</div>
+                        <h3>System Uptime</h3>
+                        <p>Reliable ML systems with robust monitoring and alerting</p>
+                        <div class="impact-bar">
+                            <div class="impact-progress" style="--progress: 88%"></div>
+                        </div>
+                    </div>
+
+                    <div class="impact-card">
+                        <div class="impact-icon"><i class="fas fa-trophy"></i></div>
+                        <div class="impact-number">8</div>
+                        <h3>Industry Awards</h3>
+                        <p>Pat on Back, Bravo Award, Innovation Champion & more</p>
+                        <div class="impact-bar">
+                            <div class="impact-progress" style="--progress: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why I'm A Good Fit -->
+                <div class="maang-ready">
+                    <h3>Why I'm a Good Fit for Your Needs</h3>
+                    <div class="maang-grid">
+                        <div class="maang-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>$4.2M+ Revenue Influenced</span>
+                        </div>
+                        <div class="maang-item">
+                            <i class="fas fa-users"></i>
+                            <span>12M+ Users Served Daily</span>
+                        </div>
+                        <div class="maang-item">
+                            <i class="fas fa-handshake"></i>
+                            <span>15+ Enterprise Clients Won</span>
+                        </div>
+                        <div class="maang-item">
+                            <i class="fas fa-piggy-bank"></i>
+                            <span>₹2.5M+ Cost Savings</span>
+                        </div>
+                        <div class="maang-item">
+                            <i class="fas fa-people-group"></i>
+                            <span>Led Team of 4 AI Engineers</span>
+                        </div>
+                        <div class="maang-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>99.9% Uptime Systems</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Experience Timeline</h2>
+                    <div class="carousel-nav">
+                        <button class="carousel-arrow prev" data-target="exp"><i
+                                class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-arrow next" data-target="exp"><i
+                                class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="experience-carousel" id="exp-carousel">
+                    <div class="carousel-track" id="exp-track">
+                        <!-- Current Role - Featured -->
+                        <div class="exp-card featured-exp">
+                            <div class="exp-media">
+                                <img src="images/exp_gammastack_1766600943191.png" alt="Gammastack" loading="lazy">
+                                <div class="exp-badge live">CURRENT</div>
+                            </div>
+                            <div class="exp-content">
+                                <div class="exp-meta">
+                                    <span class="exp-match">98% Match</span>
+                                    <span class="exp-date">Jun 2025 - Present</span>
+                                </div>
+                                <div class="exp-title-row">
+                                    <div class="company-logo">
+                                        <img src="images/GAMMASTACK LOGO.png" alt="Gammastack" loading="lazy">
+                                    </div>
+                                    <div class="exp-title-info">
+                                        <h3>AI/ML Solutions Engineer</h3>
+                                        <p class="exp-company">Gammastack</p>
+                                    </div>
+                                </div>
+                                <ul class="exp-highlights">
+                                    <li><i class="fas fa-star"></i> Leading team of 4 GenAI Engineers</li>
+                                    <li><i class="fas fa-star"></i> Converted 15+ enterprise clients</li>
+                                    <li><i class="fas fa-star"></i> $4.2M revenue influenced</li>
+                                    <li><i class="fas fa-star"></i> 12M+ users on recommender</li>
+                                </ul>
+                                <div class="exp-stack">
+                                    <span>LightFM</span>
+                                    <span>LLMs</span>
+                                    <span>Leadership</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- D Square -->
+                        <div class="exp-card">
+                            <div class="exp-media">
+                                <img src="images/ml-pipeline.jpg" alt="D Square" loading="lazy">
+                            </div>
+                            <div class="exp-content">
+                                <div class="exp-meta">
+                                    <span class="exp-match">95% Match</span>
+                                    <span class="exp-date">Jun 2024 - May 2025</span>
+                                </div>
+                                <div class="exp-title-row">
+                                    <div class="company-logo dsquare">
+                                        <i class="fas fa-square"></i>
+                                        <span>D²</span>
+                                    </div>
+                                    <div class="exp-title-info">
+                                        <h3>Machine Learning Engineer</h3>
+                                        <p class="exp-company">D Square Consulting</p>
+                                    </div>
+                                </div>
+                                <ul class="exp-highlights">
+                                    <li><i class="fas fa-check"></i> ₹1.5M cost saved (Whisper)</li>
+                                    <li><i class="fas fa-check"></i> 10x faster diagnostics</li>
+                                    <li><i class="fas fa-check"></i> 5+ enterprise clients</li>
+                                </ul>
+                                <div class="exp-stack">
+                                    <span>Whisper</span>
+                                    <span>RAG</span>
+                                    <span>ETL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Confetti -->
+                        <div class="exp-card">
+                            <div class="exp-media">
+                                <img src="images/startup.jpg" alt="Confetti" loading="lazy">
+                            </div>
+                            <div class="exp-content">
+                                <div class="exp-meta">
+                                    <span class="exp-match">92% Match</span>
+                                    <span class="exp-date">Aug 2023 - Mar 2024</span>
+                                </div>
+                                <div class="exp-title-row">
+                                    <div class="company-logo confetti">
+                                        <i class="fab fa-y-combinator"></i>
+                                        <span>YC</span>
+                                    </div>
+                                    <div class="exp-title-info">
+                                        <h3>AI Software Engineer</h3>
+                                        <p class="exp-company">Confetti (YC Backed)</p>
+                                    </div>
+                                </div>
+                                <ul class="exp-highlights">
+                                    <li><i class="fas fa-check"></i> Stable Diffusion pipelines</li>
+                                    <li><i class="fas fa-check"></i> 40% accuracy improvement</li>
+                                    <li><i class="fas fa-check"></i> Series A contribution</li>
+                                </ul>
+                                <div class="exp-stack">
+                                    <span>GANs</span>
+                                    <span>Diffusion</span>
+                                    <span>PyTorch</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tech Mahindra -->
+                        <div class="exp-card">
+                            <div class="exp-media">
+                                <img src="images/analytics.jpg" alt="Tech Mahindra" loading="lazy">
+                            </div>
+                            <div class="exp-content">
+                                <div class="exp-meta">
+                                    <span class="exp-match">90% Match</span>
+                                    <span class="exp-date">Nov 2020 - Nov 2022</span>
+                                </div>
+                                <div class="exp-title-row">
+                                    <div class="company-logo">
+                                        <img src="images/TECH MAHINDRA LOGO.png" alt="Tech Mahindra" loading="lazy">
+                                    </div>
+                                    <div class="exp-title-info">
+                                        <h3>Technical Associate</h3>
+                                        <p class="exp-company">Tech Mahindra</p>
+                                    </div>
+                                </div>
+                                <ul class="exp-highlights">
+                                    <li><i class="fas fa-check"></i> ML pipeline development</li>
+                                    <li><i class="fas fa-check"></i> 3x Bravo & Pat Awards</li>
+                                    <li><i class="fas fa-check"></i> Led 3 CV projects</li>
+                                </ul>
+                                <div class="exp-stack">
+                                    <span>ML</span>
+                                    <span>CV</span>
+                                    <span>AWS</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mphasis -->
+                        <div class="exp-card">
+                            <div class="exp-media">
+                                <img src="images/recommendation.jpg" alt="Mphasis" loading="lazy">
+                            </div>
+                            <div class="exp-content">
+                                <div class="exp-meta">
+                                    <span class="exp-match">88% Match</span>
+                                    <span class="exp-date">May 2019 - Oct 2020</span>
+                                </div>
+                                <div class="exp-title-row">
+                                    <div class="company-logo">
+                                        <img src="images/MPHASIS LOGO.png" alt="Mphasis" loading="lazy">
+                                    </div>
+                                    <div class="exp-title-info">
+                                        <h3>Technical Engineer</h3>
+                                        <p class="exp-company">Mphasis</p>
+                                    </div>
+                                </div>
+                                <ul class="exp-highlights">
+                                    <li><i class="fas fa-check"></i> Data analytics dashboards</li>
+                                    <li><i class="fas fa-check"></i> Process automation</li>
+                                    <li><i class="fas fa-check"></i> Cross-team collaboration</li>
+                                </ul>
+                                <div class="exp-stack">
+                                    <span>SQL</span>
+                                    <span>Power BI</span>
+                                    <span>Python</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Trending Now) -->
+        <section id="projects" class="projects-section">
+            <div class="section-container" style="max-width: 100%; padding: 0;">
+                <div class="section-header">
+                    <h2>Trending Now</h2>
+                    <span class="view-all">Explore All <i class="fas fa-chevron-right"></i></span>
+                </div>
+
+                <!-- Row 1: Enterprise AI -->
+                <div class="netflix-row" style="z-index: 10;">
+                    <div class="row-title">Enterprise AI Solutions</div>
+                    <div class="row-container">
+                        <div class="row-content" id="row-enterprise">
+
+                            <!-- Project Card 1: AI Engine -->
+                            <div class="project-card" data-project="ai-engine" data-title="AI Personalization Engine"
+                                data-desc="Production recommender system using LightFM and hybrid collaborative filtering. Features real-time serving with Redis caching and A/B testing framework."
+                                data-match="98" data-year="2024" data-seasons="5"
+                                data-tags="LightFM,LightGBM,Redis,Flask,Kubernetes"
+                                data-img="images/covers/arc_engine.jpg" data-github="https://github.com/ritikmishra1">
+                                <div class="project-card-media">
+                                    <img src="/assets/arc_engine-CVXljQ13.jpg" alt="AI Engine">
+                                </div>
+                                <div class="project-hover-info">
+                                    <div class="hover-actions">
+                                        <button class="action-btn play"><i class="fas fa-play"></i></button>
+                                        <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                        <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                        <button class="action-btn expand-btn" style="margin-left: auto;"><i
+                                                class="fas fa-chevron-down"></i></button>
+                                    </div>
+                                    <div class="hover-meta">
+                                        <span class="match-score">98% Match</span>
+                                        <span class="content-rating">5 Seasons</span>
+                                        <span class="hd-badge">4K</span>
+                                    </div>
+                                    <div class="hover-tags">
+                                        <span>LightFM</span><span>Redis</span><span>Flask</span>
+                                    </div>
+                                    <h4>AI Personalization Engine</h4>
+                                </div>
+                            </div>
+
+                            <!-- Project Card 2: RAG System -->
+                            <div class="project-card" data-project="rag-system" data-title="Enterprise RAG System"
+                                data-desc="AI-powered knowledge base with semantic search. LLM-based document retrieval and intelligent Q&A for enterprise clients."
+                                data-match="95" data-year="2024" data-seasons="3"
+                                data-tags="LangChain,GPT-4,Pinecone,FastAPI,PostgreSQL"
+                                data-img="images/covers/rag_system.jpg" data-github="https://github.com/ritikmishra1">
+                                <div class="project-card-media">
+                                    <img src="/assets/rag_system-DMb2ZmoK.jpg" alt="RAG System">
+                                </div>
+                                <div class="project-hover-info">
+                                    <div class="hover-actions">
+                                        <button class="action-btn play"><i class="fas fa-play"></i></button>
+                                        <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                        <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                        <button class="action-btn expand-btn" style="margin-left: auto;"><i
+                                                class="fas fa-chevron-down"></i></button>
+                                    </div>
+                                    <div class="hover-meta">
+                                        <span class="match-score">95% Match</span>
+                                        <span class="content-rating">3 Seasons</span>
+                                        <span class="hd-badge">4K</span>
+                                    </div>
+                                    <div class="hover-tags">
+                                        <span>LangChain</span><span>GPT-4</span><span>RAG</span>
+                                    </div>
+                                    <h4>Enterprise RAG System</h4>
+                                </div>
+                            </div>
+
+                            <!-- Project Card 3: Faculty Management System -->
+                            <div class="project-card" data-project="faculty-system"
+                                data-title="Faculty Management System"
+                                data-desc="Comprehensive faculty lifecycle management system built for Jain University. Streamlined recruitment, payroll, and academic planning for 500+ faculty members."
+                                data-match="96" data-year="2023" data-seasons="3"
+                                data-tags="Python,Django,PostgreSQL,React,Docker"
+                                data-img="images/covers/faculty_system.jpg" data-github="#">
+                                <div class="project-card-media">
+                                    <img src="/assets/faculty_system-BN9vgV7C.jpg" alt="Faculty Management System">
+                                </div>
+                                <div class="project-hover-info">
+                                    <div class="hover-actions">
+                                        <button class="action-btn play"><i class="fas fa-play"></i></button>
+                                        <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                        <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                        <button class="action-btn expand-btn" style="margin-left: auto;"><i
+                                                class="fas fa-chevron-down"></i></button>
+                                    </div>
+                                    <div class="hover-meta">
+                                        <span class="match-score">96% Match</span>
+                                        <span class="content-rating">3 Seasons</span>
+                                        <span class="hd-badge">HD</span>
+                                    </div>
+                                    <div class="hover-tags">
+                                        <span>Django</span><span>React</span><span>PostgreSQL</span>
+                                    </div>
+                                    <h4>Faculty Management System</h4>
+                                </div>
+                            </div>
+
+                            <!-- Project Card 4: Client Analytics -->
+                            <div class="project-card" data-project="client-analytics"
+                                data-title="Enterprise Analytics Platform"
+                                data-desc="Executive dashboards and predictive analytics for business stakeholders. Data-driven insights powering strategic decisions."
+                                data-match="90" data-year="2022" data-seasons="3"
+                                data-tags="Power BI,Python,SQL,AWS,Snowflake"
+                                data-img="images/covers/client_analytics.jpg"
+                                data-github="https://github.com/ritikmishra1">
+                                <div class="project-card-media">
+                                    <img src="/assets/client_analytics-BhdTKPRd.jpg" alt="Analytics Platform">
+                                </div>
+                                <div class="project-hover-info">
+                                    <div class="hover-actions">
+                                        <button class="action-btn play"><i class="fas fa-play"></i></button>
+                                        <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                        <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                        <button class="action-btn expand-btn" style="margin-left: auto;"><i
+                                                class="fas fa-chevron-down"></i></button>
+                                    </div>
+                                    <div class="hover-meta">
+                                        <span class="match-score">90% Match</span>
+                                        <span class="content-rating">3 Seasons</span>
+                                    </div>
+                                    <div class="hover-tags">
+                                        <span>Power BI</span><span>AWS</span><span>Snowflake</span>
+                                    </div>
+                                    <h4>Enterprise Analytics</h4>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2: Generative AI -->
+                <div class="netflix-row" style="z-index: 9;">
+                    <div class="row-title">Generative AI & LLMs</div>
+                    <div class="row-container">
+                        <div class="row-content" id="row-genai">
+
+                            <!-- Project Card 5: Virtual Try-On -->
+                            <div class="project-card" data-project="virtual-tryon" data-title="AI Virtual Try-On"
+                                data-desc="Realistic apparel swapping using Stable Diffusion and GANs. Processed 500K+ images with 40% accuracy improvement. Key contribution to Series A funding."
+                                data-match="99" data-year="2024" data-seasons="4"
+                                data-tags="Stable Diffusion,GANs,PyTorch,ControlNet,CLIP"
+                                data-img="images/covers/virtual_tryon.jpg"
+                                data-github="https://github.com/ritikmishra1">
+                                <div class="project-card-media">
+                                    <img src="/assets/virtual_tryon-ByMHs8WX.jpg" alt="Virtual Try-On">
+                                </div>
+                                <div class="project-hover-info">
+                                    <div class="hover-actions">
+                                        <button class="action-btn play"><i class="fas fa-play"></i></button>
+                                        <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                        <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                        <button class="action-btn expand-btn" style="margin-left: auto;"><i
+                                                class="fas fa-chevron-down"></i></button>
+                                    </div>
+                                    <div class="hover-meta">
+                                        <span class="match-score">99% Match</span>
+                                        <span class="content-rating">4 Seasons</span>
+                                        <span class="hd-badge new">NEW</span>
+                                    </div>
+                                    <div class="hover-tags">
+                                        <span>Stable Diffusion</span><span>GANs</span><span>PyTorch</span>
+                                    </div>
+                                    <h4>AI Virtual Try-On</h4>
+                                </div>
+                            </div>
+
+                            <!-- Project Card 6: Audio Sentiment -->
+                            <div class="project-card" data-project="audio-sentiment"
+                                data-title="Audio Sentiment Analysis"
+                                data-desc="Multilingual sentiment analysis using OpenAI Whisper. Processing 10K calls/day, saving ₹2.5M annually by eliminating GPT-4 dependency."
+                                data-match="89" data-year="2024" data-seasons="3"
+                                data-tags="Whisper,TorchAudio,Transformers,FastAPI,PostgreSQL"
+                                data-img="images/covers/audio_sentiment.jpg"
+                                data-github="https://github.com/ritikmishra1">
+                                <div class="project-card-media">
+                                    <img src="/assets/audio_sentiment-D5lezhoA.jpg" alt="Audio Sentiment">
+                                </div>
+                                <div class="project-hover-info">
+                                    <div class="hover-actions">
+                                        <button class="action-btn play"><i class="fas fa-play"></i></button>
+                                        <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                        <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                        <button class="action-btn expand-btn" style="margin-left: auto;"><i
+                                                class="fas fa-chevron-down"></i></button>
+                                    </div>
+                                    <div class="hover-meta">
+                                        <span class="match-score">89% Match</span>
+                                        <span class="content-rating">3 Seasons</span>
+                                        <span class="hd-badge">HD</span>
+                                    </div>
+                                    <div class="hover-tags">
+                                        <span>Whisper</span><span>NLP</span><span>TorchAudio</span>
+                                    </div>
+                                    <h4>Audio Sentiment Analysis</h4>
+                                </div>
+                            </div>
+
+                            <!-- Project Card 7: ML Ops -->
+                            <div class="project-card" data-project="mlops" data-title="MLOps Pipeline"
+                                data-desc="End-to-end ML lifecycle management with automated training, deployment, and monitoring. 99.9% uptime with auto-scaling."
+                                data-match="85" data-year="2023" data-seasons="4"
+                                data-tags="Docker,Kubernetes,MLflow,TFX,Airflow" data-img="images/covers/mlops.jpg"
+                                data-github="https://github.com/ritikmishra1">
+                                <div class="project-card-media">
+                                    <img src="/assets/mlops-K9S0KDTi.jpg" alt="ML Ops">
+                                </div>
+                                <div class="project-hover-info">
+                                    <div class="hover-actions">
+                                        <button class="action-btn play"><i class="fas fa-play"></i></button>
+                                        <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                        <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                        <button class="action-btn expand-btn" style="margin-left: auto;"><i
+                                                class="fas fa-chevron-down"></i></button>
+                                    </div>
+                                    <div class="hover-meta">
+                                        <span class="match-score">85% Match</span>
+                                        <span class="content-rating">4 Seasons</span>
+                                    </div>
+                                    <div class="hover-tags">
+                                        <span>Docker</span><span>K8s</span><span>MLflow</span>
+                                    </div>
+                                    <h4>MLOps Pipeline</h4>
+                                </div>
+                            </div>
+
+                            <!-- Project Card 8: Computer Vision -->
+                            <div class="project-card" data-project="cv-detection" data-title="CV Object Detection"
+                                data-desc="Production computer vision system for automated quality inspection. 10x faster diagnostics with 99.5% defect detection rate."
+                                data-match="91" data-year="2022" data-seasons="3"
+                                data-tags="YOLO,OpenCV,TensorRT,ONNX,AWS Rekognition" data-img="images/covers/cv_detection.jpg"
+                                data-github="https://github.com/ritikmishra1">
+                                <div class="project-card-media">
+                                    <img src="/assets/cv_detection-Dl9MiGOS.jpg" alt="Computer Vision">
+                                </div>
+                                <div class="project-hover-info">
+                                    <div class="hover-actions">
+                                        <button class="action-btn play"><i class="fas fa-play"></i></button>
+                                        <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                        <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                        <button class="action-btn expand-btn" style="margin-left: auto;"><i
+                                                class="fas fa-chevron-down"></i></button>
+                                    </div>
+                                    <div class="hover-meta">
+                                        <span class="match-score">91% Match</span>
+                                        <span class="content-rating">3 Seasons</span>
+                                    </div>
+                                    <div class="hover-tags">
+                                        <span>YOLO</span><span>OpenCV</span><span>TensorRT</span>
+                                    </div>
+                                    <h4>CV Object Detection</h4>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3: Critic Reviews (LORs) -->
+                <div class="netflix-row" style="z-index: 8;">
+                    <div class="row-title"><i class="fas fa-star" style="color: #E50914;"></i> Critic Reviews & Recommendations</div>
+                    <div class="row-container">
+                        <div class="row-content" id="row-lors">
+
+                            <!-- LOR Card 1: Vartika Sharma -->
+                            <div class="lor-card" data-lor="images/lors/Vartika_lor.png">
+                                <div class="lor-card-media">
+                                    <img src="/assets/Vartika_lor-KhOkAuSg.png" alt="LOR from Vartika Sharma">
+                                </div>
+                                <div class="lor-info">
+                                    <h4>Vartika Sharma</h4>
+                                    <p>Senior Manager, Tech Mahindra</p>
+                                    <span class="lor-rating"><i class="fas fa-star"></i> 5.0</span>
+                                </div>
+                            </div>
+
+                            <!-- LOR Card 2: Prakash Gupta -->
+                            <div class="lor-card" data-lor="images/lors/Prakash_lor.png">
+                                <div class="lor-card-media">
+                                    <img src="/assets/Prakash_lor-QCABl_do.png" alt="LOR from Prakash Gupta">
+                                </div>
+                                <div class="lor-info">
+                                    <h4>Prakash Gupta</h4>
+                                    <p>Assistant Manager, Tech Mahindra</p>
+                                    <span class="lor-rating"><i class="fas fa-star"></i> 5.0</span>
+                                </div>
+                            </div>
+
+                            <!-- LOR Card 3: Trevor Paladino -->
+                            <div class="lor-card" data-lor="images/lors/Trevor_lor.png">
+                                <div class="lor-card-media">
+                                    <img src="/assets/Trevor_lor-Cyxit_jT.png" alt="LOR from Trevor Paladino">
+                                </div>
+                                <div class="lor-info">
+                                    <h4>Trevor Paladino</h4>
+                                    <p>CEO, Redwave Ventures & Sequel</p>
+                                    <span class="lor-rating"><i class="fas fa-star"></i> 5.0</span>
+                                </div>
+                            </div>
+
+                            <!-- LOR Card 4: Gazi Murat Duman -->
+                            <div class="lor-card" data-lor="images/lors/Gazi_lor.png">
+                                <div class="lor-card-media">
+                                    <img src="/assets/Gazi_lor-BbHJU7Ap.png" alt="LOR from Gazi Murat Duman">
+                                </div>
+                                <div class="lor-info">
+                                    <h4>Gazi Murat Duman</h4>
+                                    <p>Professor, University of New Haven</p>
+                                    <span class="lor-rating"><i class="fas fa-star"></i> 5.0</span>
+                                </div>
+                            </div>
+
+                            <!-- LOR Card 5: Ellen Kramer -->
+                            <div class="lor-card" data-lor="images/lors/Ellen_lor.png">
+                                <div class="lor-card-media">
+                                    <img src="/assets/Ellen_lor-q8CdLZGA.png" alt="LOR from Ellen Kramer">
+                                </div>
+                                <div class="lor-info">
+                                    <h4>Ellen Kramer</h4>
+                                    <p>Professor, University of New Haven</p>
+                                    <span class="lor-rating"><i class="fas fa-star"></i> 5.0</span>
+                                </div>
+                            </div>
+
+                            <!-- LOR Card 6: Fazli Mert Aksoy -->
+                            <div class="lor-card" data-lor="images/lors/Aksoy_lor.png">
+                                <div class="lor-card-media">
+                                    <img src="/assets/Aksoy_lor-cNdKrAZS.png" alt="LOR from Fazli Mert Aksoy">
+                                </div>
+                                <div class="lor-info">
+                                    <h4>Fazli Mert Aksoy</h4>
+                                    <p>Professor, University of New Haven</p>
+                                    <span class="lor-rating"><i class="fas fa-star"></i> 5.0</span>
+                                </div>
+                            </div>
+
+                            <!-- LOR Card 7: Ganesh Datare -->
+                            <div class="lor-card" data-lor="images/lors/Ganesh_lor.png">
+                                <div class="lor-card-media">
+                                    <img src="/assets/Ganesh_lor-BdLve8pH.png" alt="LOR from Ganesh Datare">
+                                </div>
+                                <div class="lor-info">
+                                    <h4>Ganesh Datare</h4>
+                                    <p>Professor, DY Patil University</p>
+                                    <span class="lor-rating"><i class="fas fa-star"></i> 5.0</span>
+                                </div>
+                            </div>
+
+                            <!-- LOR Card 8: Anand Irabatti -->
+                            <div class="lor-card" data-lor="images/lors/Anand_lor.png">
+                                <div class="lor-card-media">
+                                    <img src="/assets/Anand_lor-DkJej56L.png" alt="LOR from Anand Irabatti">
+                                </div>
+                                <div class="lor-info">
+                                    <h4>Anand Irabatti</h4>
+                                    <p>Professor, DY Patil University</p>
+                                    <span class="lor-rating"><i class="fas fa-star"></i> 5.0</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 4: Awards & Recognition -->
+                <div class="netflix-row" style="z-index: 7;">
+                    <div class="row-title"><i class="fas fa-trophy" style="color: #E50914;"></i> Awards & Recognition</div>
+                    <div class="row-container">
+                        <div class="row-content" id="row-awards">
+
+                            <!-- Award 1: Bravo Award -->
+                            <div class="award-card">
+                                <div class="award-card-media">
+                                    <img src="/assets/Bravo-CDAyc-Br.png" alt="Bravo Award">
+                                </div>
+                                <div class="award-info">
+                                    <h4>Bravo Award</h4>
+                                    <p>Outstanding performance & dedication</p>
+                                    <span class="award-year">Tech Mahindra</span>
+                                </div>
+                            </div>
+
+                            <!-- Award 2: Pat on the Back -->
+                            <div class="award-card">
+                                <div class="award-card-media">
+                                    <img src="/assets/Pat%20on%20Back-l9gLA3dg.png" alt="Pat on the Back Award">
+                                </div>
+                                <div class="award-info">
+                                    <h4>Pat on the Back</h4>
+                                    <p>Exceptional teamwork & collaboration</p>
+                                    <span class="award-year">Tech Mahindra</span>
+                                </div>
+                            </div>
+
+                            <!-- Award 3: Database Achievement -->
+                            <div class="award-card">
+                                <div class="award-card-media">
+                                    <img src="/assets/Database-s_X31UiO.png" alt="Database Achievement">
+                                </div>
+                                <div class="award-info">
+                                    <h4>Leads Database</h4>
+                                    <p>Led comprehensive database development</p>
+                                    <span class="award-year">Tech Mahindra</span>
+                                </div>
+                            </div>
+
+                            <!-- Award 4: Bay Decoration -->
+                            <div class="award-card">
+                                <div class="award-card-media">
+                                    <img src="/assets/Bay_Decoration-6QuDTHS0.jpeg" alt="Bay Decoration Winner">
+                                </div>
+                                <div class="award-info">
+                                    <h4>Bay Decoration Winner</h4>
+                                    <p>Creativity & team spirit showcase</p>
+                                    <span class="award-year">Tech Mahindra</span>
+                                </div>
+                            </div>
+
+                            <!-- Award 5: Head of Cultural Programs -->
+                            <div class="award-card">
+                                <div class="award-card-media" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-users" style="font-size: 4rem; color: white;"></i>
+                                </div>
+                                <div class="award-info">
+                                    <h4>Head of Cultural Programs</h4>
+                                    <p>Leadership in campus culture</p>
+                                    <span class="award-year">DY Patil College</span>
+                                </div>
+                            </div>
+
+                            <!-- Award 6: MS Analytics GPA -->
+                            <div class="award-card">
+                                <div class="award-card-media" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); display: flex; align-items: center; justify-content: center;">
+                                    <span style="font-size: 3rem; color: white; font-weight: bold;">3.60</span>
+                                </div>
+                                <div class="award-info">
+                                    <h4>MS Business Analytics</h4>
+                                    <p>GPA: 3.60/4.0</p>
+                                    <span class="award-year">University of New Haven</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 5: Now Reading (Blogs) -->
+                <div class="netflix-row" style="z-index: 6;">
+                    <div class="row-title"><i class="fas fa-book-open" style="color: #E50914;"></i> Now Reading - AI/ML Insights</div>
+                    <div class="row-container">
+                        <div class="row-content" id="row-blogs">
+
+                            <!-- Blog 1 -->
+                            <a href="https://openai.com/blog" target="_blank" class="blog-card">
+                                <div class="blog-card-media" style="background: linear-gradient(135deg, #00A67E 0%, #1A1A2E 100%);">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="blog-info">
+                                    <h4>OpenAI Blog</h4>
+                                    <p>Latest in GPT & AI Research</p>
+                                    <span class="blog-tag">AI Research</span>
+                                </div>
+                            </a>
+
+                            <!-- Blog 2 -->
+                            <a href="https://ai.googleblog.com/" target="_blank" class="blog-card">
+                                <div class="blog-card-media" style="background: linear-gradient(135deg, #4285F4 0%, #1A1A2E 100%);">
+                                    <i class="fab fa-google"></i>
+                                </div>
+                                <div class="blog-info">
+                                    <h4>Google AI Blog</h4>
+                                    <p>Cutting-edge ML innovations</p>
+                                    <span class="blog-tag">Machine Learning</span>
+                                </div>
+                            </a>
+
+                            <!-- Blog 3 -->
+                            <a href="https://huggingface.co/blog" target="_blank" class="blog-card">
+                                <div class="blog-card-media" style="background: linear-gradient(135deg, #FFD21E 0%, #1A1A2E 100%);">
+                                    <span style="font-size: 2.5rem;">🤗</span>
+                                </div>
+                                <div class="blog-info">
+                                    <h4>Hugging Face</h4>
+                                    <p>Transformers & NLP updates</p>
+                                    <span class="blog-tag">NLP</span>
+                                </div>
+                            </a>
+
+                            <!-- Blog 4 -->
+                            <a href="https://www.deeplearning.ai/the-batch/" target="_blank" class="blog-card">
+                                <div class="blog-card-media" style="background: linear-gradient(135deg, #E50914 0%, #1A1A2E 100%);">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="blog-info">
+                                    <h4>The Batch by Andrew Ng</h4>
+                                    <p>Weekly AI news digest</p>
+                                    <span class="blog-tag">Deep Learning</span>
+                                </div>
+                            </a>
+
+                            <!-- Blog 5 -->
+                            <a href="https://www.anthropic.com/news" target="_blank" class="blog-card">
+                                <div class="blog-card-media" style="background: linear-gradient(135deg, #C4A77D 0%, #1A1A2E 100%);">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="blog-info">
+                                    <h4>Anthropic Research</h4>
+                                    <p>AI Safety & Claude updates</p>
+                                    <span class="blog-tag">AI Safety</span>
+                                </div>
+                            </a>
+
+                            <!-- Blog 6 -->
+                            <a href="https://towardsdatascience.com/" target="_blank" class="blog-card">
+                                <div class="blog-card-media" style="background: linear-gradient(135deg, #00AB6C 0%, #1A1A2E 100%);">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="blog-info">
+                                    <h4>Towards Data Science</h4>
+                                    <p>Data science community</p>
+                                    <span class="blog-tag">Data Science</span>
+                                </div>
+                            </a>
+
+                            <!-- Blog 7 -->
+                            <a href="https://arxiv.org/list/cs.AI/recent" target="_blank" class="blog-card">
+                                <div class="blog-card-media" style="background: linear-gradient(135deg, #B31B1B 0%, #1A1A2E 100%);">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="blog-info">
+                                    <h4>arXiv AI Papers</h4>
+                                    <p>Latest research papers</p>
+                                    <span class="blog-tag">Research</span>
+                                </div>
+                            </a>
+
+                            <!-- Blog 8 -->
+                            <a href="https://newsletter.theaiedge.io/" target="_blank" class="blog-card">
+                                <div class="blog-card-media" style="background: linear-gradient(135deg, #667eea 0%, #1A1A2E 100%);">
+                                    <i class="fas fa-newspaper"></i>
+                                </div>
+                                <div class="blog-info">
+                                    <h4>The AI Edge</h4>
+                                    <p>MLOps & production AI</p>
+                                    <span class="blog-tag">MLOps</span>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- LOR Full View Modal -->
+        <div class="lor-modal-overlay" id="lor-modal">
+            <div class="lor-modal-content">
+                <div class="lor-modal-close"><i class="fas fa-times"></i></div>
+                <img id="lor-full-img" src="" alt="Letter of Recommendation">
+            </div>
+        </div>
+
+        <!-- Netflix Detail Modal -->
+        <div class="netflix-modal-overlay" id="project-modal">
+            <div class="netflix-modal-content">
+                <div class="modal-close-btn"><i class="fas fa-times"></i></div>
+
+                <div class="modal-video-container">
+                    <img id="modal-hero-img" src="" alt="Cover" class="modal-hero-img">
+                    <div class="modal-video-overlay"></div>
+
+                    <div class="modal-hero-content">
+                        <h2 class="modal-title" id="modal-title">Project Title</h2>
+                        <div class="modal-actions">
+                            <button class="modal-btn play"><i class="fab fa-github"></i> View Code</button>
+                            <button class="modal-btn secondary"><i class="fas fa-plus"></i> My List</button>
+                            <button class="modal-btn secondary"><i class="fas fa-thumbs-up"></i> Like</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-info">
+                    <div class="modal-main-col">
+                        <div class="modal-header-meta">
+                            <span class="match-score" id="modal-match">98% Match</span>
+                            <span class="year" id="modal-year">2024</span>
+                            <span class="duration" id="modal-seasons">5 Seasons</span>
+                            <span class="hd-badge">HD</span>
+                        </div>
+
+                        <p class="modal-description" id="modal-desc">
+                            Project description goes here...
+                        </p>
+
+                        <!-- Season Selector -->
+                        <div class="season-selector">
+                            <label>Season:</label>
+                            <select id="season-select">
+                                <option value="1">Season 1: Foundation</option>
+                                <option value="2">Season 2: Development</option>
+                                <option value="3">Season 3: Optimization</option>
+                                <option value="4">Season 4: Scaling</option>
+                                <option value="5">Season 5: Production</option>
+                            </select>
+                        </div>
+
+                        <div class="modal-episodes-title">Episodes (Implementation Roadmap)</div>
+                        <div class="modal-episodes-list" id="episodes-list">
+                            <!-- Episodes will be populated by JS -->
+                        </div>
+                    </div>
+
+                    <div class="modal-sidebar-col">
+                        <div class="modal-sidebar-item">
+                            <span class="sidebar-label">Tech Stack:</span>
+                            <span class="sidebar-value" id="modal-tags">Python, React</span>
+                        </div>
+                        <div class="modal-sidebar-item">
+                            <span class="sidebar-label">Role:</span>
+                            <span class="sidebar-value" id="modal-role">Lead Engineer</span>
+                        </div>
+                        <div class="modal-sidebar-item">
+                            <span class="sidebar-label">Impact:</span>
+                            <span class="sidebar-value" id="modal-impact">$4.2M Revenue</span>
+                        </div>
+                        <div class="modal-sidebar-item">
+                            <span class="sidebar-label">Categories:</span>
+                            <span class="sidebar-value" id="modal-categories">AI, Enterprise, ML</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Technical Arsenal</h2>
+                </div>
+
+                <div class="skills-showcase">
+                    <!-- Core ML/AI -->
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>Machine Learning & AI</h3>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <div class="skill-chips">
+                            <span class="skill-chip hot"><i class="fas fa-fire"></i> PyTorch</span>
+                            <span class="skill-chip hot"><i class="fas fa-fire"></i> TensorFlow</span>
+                            <span class="skill-chip hot"><i class="fas fa-fire"></i> LLMs & GPT</span>
+                            <span class="skill-chip hot"><i class="fas fa-fire"></i> LangChain</span>
+                            <span class="skill-chip">RAG Systems</span>
+                            <span class="skill-chip">Transformers</span>
+                            <span class="skill-chip">GANs</span>
+                            <span class="skill-chip">Stable Diffusion</span>
+                            <span class="skill-chip">Whisper</span>
+                            <span class="skill-chip">LightGBM</span>
+                            <span class="skill-chip">LightFM</span>
+                            <span class="skill-chip">Computer Vision</span>
+                        </div>
+                    </div>
+
+                    <!-- Languages & Backend -->
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Languages & Backend</h3>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-chips">
+                            <span class="skill-chip hot"><i class="fab fa-python"></i> Python</span>
+                            <span class="skill-chip">SQL</span>
+                            <span class="skill-chip">JavaScript</span>
+                            <span class="skill-chip">TypeScript</span>
+                            <span class="skill-chip">R</span>
+                            <span class="skill-chip">Flask</span>
+                            <span class="skill-chip">FastAPI</span>
+                            <span class="skill-chip">Node.js</span>
+                            <span class="skill-chip">GraphQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Data & Cloud -->
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <h3>Data & Cloud</h3>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-chips">
+                            <span class="skill-chip hot"><i class="fab fa-aws"></i> AWS</span>
+                            <span class="skill-chip hot"><i class="fab fa-aws"></i> AWS SageMaker</span>
+                            <span class="skill-chip hot"><i class="fab fa-aws"></i> AWS Bedrock</span>
+                            <span class="skill-chip">Kubernetes</span>
+                            <span class="skill-chip">Docker</span>
+                            <span class="skill-chip">Kafka</span>
+                            <span class="skill-chip">Airflow</span>
+                            <span class="skill-chip">Snowflake</span>
+                            <span class="skill-chip">Redis</span>
+                            <span class="skill-chip">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="certifications">
+                    <h3>Certifications</h3>
+                    <div class="cert-grid">
+                        <div class="cert-card">
+                            <i class="fab fa-aws"></i>
+                            <div class="cert-info">
+                                <h4>AWS Machine Learning Specialty</h4>
+                                <p>Amazon Web Services • 2024</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <i class="fab fa-aws"></i>
+                            <div class="cert-info">
+                                <h4>AWS ML Specialty</h4>
+                                <p>Amazon • 2024</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <i class="fas fa-brain"></i>
+                            <div class="cert-info">
+                                <h4>Deep Learning Specialization</h4>
+                                <p>Coursera • 2023</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <i class="fas fa-robot"></i>
+                            <div class="cert-info">
+                                <h4>LLM Ops & RAG</h4>
+                                <p>DeepLearning.AI • 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Fun Facts Section -->
+        <section id="about" class="about-section">
+            <div class="section-container">
+                <!-- Education -->
+                <div class="education-row">
+                    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                    <div class="edu-cards">
+                        <div class="edu-card">
+                            <div class="edu-logo">
+                                <img src="images/UNIVERSITY OF NEW HAVEN LOGO.png" alt="University of New Haven"
+                                    loading="lazy">
+                            </div>
+                            <div class="edu-details">
+                                <h4>M.S. Business Analytics</h4>
+                                <p>University of New Haven, Connecticut, USA</p>
+                                <div class="edu-stats">
+                                    <span class="gpa"><i class="fas fa-star"></i> GPA: 3.60/4.00</span>
+                                    <span class="year">Dec 2022 - May 2024</span>
+                                </div>
+                                <p class="edu-highlights">Data Science, Machine Learning, Statistical Analysis
+                                </p>
+                            </div>
+                        </div>
+                        <div class="edu-card">
+                            <div class="edu-logo">
+                                <img src="images/DY PATIL LOGO.png" alt="DY Patil University" loading="lazy">
+                            </div>
+                            <div class="edu-details">
+                                <h4>BBA, Information Technology</h4>
+                                <p>DY Patil Institute of Distance Learning, Pune</p>
+                                <div class="edu-stats">
+                                    <span class="gpa"><i class="fas fa-star"></i> GPA: 7.51/8.00</span>
+                                    <span class="year">May 2019 - Jun 2022</span>
+                                </div>
+                                <p class="edu-highlights">IT Management, Business Administration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fun Facts (Stalker View) -->
+                <div class="fun-facts-row" id="fun-facts">
+                    <h2><i class="fas fa-smile-wink"></i> Fun Facts About Me</h2>
+                    <div class="facts-grid">
+                        <div class="fact-card">
+                            <span class="fact-emoji">🎮</span>
+                            <h4>Gaming Enthusiast</h4>
+                            <p>Built a game recommender because I play too many games!</p>
+                        </div>
+                        <div class="fact-card">
+                            <span class="fact-emoji">☕</span>
+                            <h4>Coffee Powered</h4>
+                            <p>500+ cups of coffee = 500+ models trained.</p>
+                        </div>
+                        <div class="fact-card">
+                            <span class="fact-emoji">🌍</span>
+                            <h4>Global Journey</h4>
+                            <p>India → USA → India. 3 countries, 1 mission.</p>
+                        </div>
+                        <div class="fact-card">
+                            <span class="fact-emoji">🏆</span>
+                            <h4>8x Award Winner</h4>
+                            <p>Pat on Back, Bravo, Innovation Champion & more!</p>
+                        </div>
+                        <div class="fact-card">
+                            <span class="fact-emoji">📚</span>
+                            <h4>12 Recommendations</h4>
+                            <p>From CEOs, VPs, and professors worldwide!</p>
+                        </div>
+                        <div class="fact-card">
+                            <span class="fact-emoji">🤖</span>
+                            <h4>AI Everything</h4>
+                            <p>Even this portfolio has AI easter eggs. Find them!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonials -->
+                <div class="testimonials-row">
+                    <h2><i class="fas fa-quote-left"></i> What People Say</h2>
+                    <div class="testimonials-carousel">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"Ritik built our recommendation engine from scratch. His technical skills and
+                                    ability to deliver production-ready solutions exceeded our expectations."
+                                </p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">👨‍💼</div>
+                                <div class="author-info">
+                                    <h5>Engineering Manager</h5>
+                                    <p>Enterprise Client</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"In my 20 years of teaching, Ritik stands out as one of the top 3 students.
+                                    His
+                                    analytical skills are truly world-class."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">👨‍🏫</div>
+                                <div class="author-info">
+                                    <h5>Professor</h5>
+                                    <p>University of New Haven</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"Ritik's AI work was instrumental in our Series A. The virtual try-on feature
+                                    he
+                                    built became our key differentiator."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">👩‍💻</div>
+                                <div class="author-info">
+                                    <h5>CEO</h5>
+                                    <p>YC-Backed Startup</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div id="contact-particles" class="contact-particles"></div>
+            <div class="contact-wrapper">
+                <div class="contact-visual">
+                    <img src="me.jpeg" alt="Ritik Mishra" class="contact-photo">
+                    <div class="contact-decorations">
+                        <div class="deco deco-1"><i class="fas fa-brain"></i></div>
+                        <div class="deco deco-2"><i class="fas fa-code"></i></div>
+                        <div class="deco deco-3"><i class="fas fa-rocket"></i></div>
+                    </div>
+                </div>
+                <div class="contact-content">
+                    <h2>Let's Build the Future Together</h2>
+                    <p class="contact-tagline">Ready to add AI/ML capabilities to your team?</p>
+
+                    <div class="contact-stats">
+                        <div class="contact-stat">
+                            <span class="stat-num">
+                                &lt; 4hrs</span>
+                            <span class="stat-text">Response Time</span>
+                        </div>
+                        <div class="contact-stat">
+                            <span class="stat-num">Open</span>
+                            <span class="stat-text">To Offers</span>
+                        </div>
+                        <div class="contact-stat">
+                            <span class="stat-num">Global</span>
+                            <span class="stat-text">Remote Ready</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-buttons">
+                        <a href="mailto:rmish5@unh.newhaven.edu" class="contact-btn email">
+                            <i class="fas fa-envelope"></i>
+                            <span>rmish5@unh.newhaven.edu</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ritik-mishra1/" target="_blank"
+                            class="contact-btn linkedin">
+                            <i class="fab fa-linkedin"></i>
+                            <span>Connect on LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/ritikmishra1" target="_blank" class="contact-btn github">
+                            <i class="fab fa-github"></i>
+                            <span>View GitHub</span>
+                        </a>
+                        <a href="tel:+918928380772" class="contact-btn phone">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 89283 80772</span>
+                        </a>
+                    </div>
+
+                    <div class="contact-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Bengaluru, India</span>
+                        <span class="location-note">(Open to Global Relocation)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <div class="footer-logo">RITIK<span>FLIX</span></div>
+                        <p>AI/ML Engineer crafting production-ready ML solutions</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-col">
+                            <h4>Navigation</h4>
+                            <a href="#hero">Home</a>
+                            <a href="#impact">Impact</a>
+                            <a href="#experience">Experience</a>
+                            <a href="#projects">Projects</a>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Connect</h4>
+                            <a href="https://www.linkedin.com/in/ritik-mishra1/" target="_blank">LinkedIn</a>
+                            <a href="https://github.com/ritikmishra1" target="_blank">GitHub</a>
+                            <a href="mailto:rmish5@unh.newhaven.edu">Email</a>
+                        </div>
+                        <div class="footer-col">
+                            <h4>More</h4>
+                            <a href="#" id="download-resume">Download Resume</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Ritik Mishra. Built with passion for AI.</p>
+                    <p class="footer-streaming">Now streaming: Quality AI solutions worldwide 🌍</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Notification Panel -->
+        <div id="notif-panel" class="notif-panel hidden">
+            <div class="notif-header">
+                <h3>Recent Updates</h3>
+                <button class="notif-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="notif-list">
+                <div class="notif-item new">
+                    <div class="notif-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="notif-content">
+                        <p><strong>New Project</strong> deployed to production</p>
+                        <span class="notif-time">Just now</span>
+                    </div>
+                </div>
+                <div class="notif-item new">
+                    <div class="notif-icon"><i class="fas fa-code"></i></div>
+                    <div class="notif-content">
+                        <p><strong>RAG System</strong> live for enterprise client</p>
+                        <span class="notif-time">This week</span>
+                    </div>
+                </div>
+                <div class="notif-item new">
+                    <div class="notif-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="notif-content">
+                        <p><strong>Open to Work</strong> - Looking for new opportunities</p>
+                        <span class="notif-time">This month</span>
+                    </div>
+                </div>
+                <div class="notif-item">
+                    <div class="notif-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="notif-content">
+                        <p><strong>Innovation Award</strong> received at Gammastack</p>
+                        <span class="notif-time">2 weeks ago</span>
+                    </div>
+                </div>
+                <div class="notif-item">
+                    <div class="notif-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="notif-content">
+                        <p><strong>AWS ML Specialty</strong> certification achieved</p>
+                        <span class="notif-time">2024</span>
+                    </div>
+                </div>
+                <div class="notif-item">
+                    <div class="notif-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="notif-content">
+                        <p><strong>Series A</strong> contribution at Confetti</p>
+                        <span class="notif-time">2024</span>
+                    </div>
+                </div>
+                <div class="notif-item">
+                    <div class="notif-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="notif-content">
+                        <p><strong>MS Analytics</strong> completed with 3.60 GPA</p>
+                        <span class="notif-time">2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <button id="back-to-top" class="back-to-top">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    </div>
+
+</body>
+
+</html>
